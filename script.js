@@ -23,8 +23,12 @@
     function initHeader() {
         const header = document.getElementById('site-header');
         if (!header) return;
+        const getThreshold = () => {
+            const hero = document.getElementById('hero-section');
+            return hero ? hero.offsetHeight * 0.85 : 80;
+        };
         const onScroll = () => {
-            if (window.scrollY > 30) header.classList.add('scrolled');
+            if (window.scrollY > getThreshold()) header.classList.add('scrolled');
             else header.classList.remove('scrolled');
         };
         window.addEventListener('scroll', onScroll, { passive: true });
@@ -168,9 +172,9 @@
     /* ----- Scroll reveal animation ----- */
     function initScrollReveal() {
         const selectors = [
-            '.badge-card', '.service-card', '.sector-card',
-            '.formality-card', '.method-step', '.why-card',
-            '.market-card', '.value-card', '.faq-item',
+            '.service-row', '.sector-tag', '.formality-item',
+            '.why-row', '.market-card', '.hero-pillar',
+            '.about-pill', '.method-step', '.faq-item',
             '.about-image', '.about-content',
             '.transport-content', '.transport-visual',
             '.section-header'
