@@ -1,0 +1,4 @@
+# Netlify redirects file — AFIM Consulting
+# Important: do NOT use a catch-all that would override real pages like
+# /merci.html (Netlify Forms success page) or /404.html.
+# Netlify will automatically serve 404.html for unknown routes.

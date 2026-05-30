@@ -1,0 +1,9 @@
+# AFIM Consulting - robots.txt
+User-agent: *
+Allow: /
+Disallow: /merci.html
+
+# Block private/build folders if any
+Disallow: /.netlify/
+
+Sitemap: /sitemap.xml
