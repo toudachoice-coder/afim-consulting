@@ -839,7 +839,7 @@ section { padding: 100px 0; }
 
 .markets-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin-bottom: 60px;
 }
@@ -1815,6 +1815,7 @@ section { padding: 100px 0; }
     .secteurs-grid { grid-template-columns: repeat(3, 1fr); }
     .method-grid { grid-template-columns: repeat(2, 1fr); }
     .formalites-grid { grid-template-columns: repeat(2, 1fr); }
+    .markets-grid { grid-template-columns: repeat(2, 1fr); }
 
     .about-grid,
     .transport-grid {
