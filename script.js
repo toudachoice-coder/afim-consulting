@@ -173,7 +173,8 @@
             '.market-card', '.value-card', '.faq-item',
             '.about-image', '.about-content',
             '.transport-content', '.transport-visual',
-            '.section-header'
+            '.section-header',
+            '.sector-block-head', '.enjeu-card', '.acc-item', '.gain-item'
         ];
         const elements = document.querySelectorAll(selectors.join(','));
         elements.forEach(el => el.classList.add('reveal'));

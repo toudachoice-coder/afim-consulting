@@ -37,4 +37,14 @@
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
+    <url><loc>/secteurs/produits-alimentaires.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>/secteurs/produits-cosmetiques.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>/secteurs/produits-artisanaux.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>/secteurs/produits-du-terroir.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>/secteurs/cooperatives.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>/secteurs/pme.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>/secteurs/importateurs.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>/secteurs/exportateurs.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>/secteurs/commercants.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>/secteurs/negociants.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
