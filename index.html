@@ -146,6 +146,245 @@
       ]
     }
     </script>
+
+    <!-- ===== HERO REDESIGN (scoped overrides — premium corporate look) ===== -->
+    <style id="hero-redesign">
+        /* Background: professional dark-navy gradient, lighter on the right so
+           the port/logistics image stays visible without going fully black. */
+        .hero--premium .hero-bg {
+            background:
+                linear-gradient(
+                    100deg,
+                    rgba(7, 24, 39, 0.94) 0%,
+                    rgba(7, 24, 39, 0.82) 32%,
+                    rgba(16, 42, 67, 0.58) 66%,
+                    rgba(16, 42, 67, 0.42) 100%
+                ),
+                linear-gradient(
+                    180deg,
+                    rgba(7, 24, 39, 0.20) 0%,
+                    rgba(7, 24, 39, 0.00) 35%,
+                    rgba(7, 24, 39, 0.45) 100%
+                ),
+                url('assets/images/hero.jpg') center/cover no-repeat;
+        }
+
+        /* Subtle, restrained accent glow — no heavy color washes. */
+        .hero--premium .hero-overlay {
+            background:
+                radial-gradient(circle at 88% 18%, rgba(45, 212, 191, 0.10), transparent 45%);
+        }
+
+        /* Structured glass content card on the left. */
+        .hero--premium .hero-content {
+            max-width: 720px;
+        }
+        .hero--premium .hero-card {
+            padding: clamp(28px, 3.5vw, 48px);
+            background: linear-gradient(150deg, rgba(7, 24, 39, 0.55), rgba(16, 42, 67, 0.30));
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 22px;
+            box-shadow:
+                0 30px 70px rgba(3, 12, 22, 0.45),
+                inset 0 1px 0 rgba(255, 255, 255, 0.06);
+            -webkit-backdrop-filter: blur(14px) saturate(120%);
+            backdrop-filter: blur(14px) saturate(120%);
+        }
+
+        /* Small premium accent line above the eyebrow tag. */
+        .hero--premium .hero-accent-line {
+            display: block;
+            width: 56px;
+            height: 3px;
+            border-radius: 2px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-light));
+            margin-bottom: 22px;
+        }
+
+        /* Refined eyebrow tag — quieter than the original pill. */
+        .hero--premium .hero-tag {
+            background: rgba(45, 212, 191, 0.08);
+            border: 1px solid rgba(45, 212, 191, 0.22);
+            color: var(--accent-light);
+            letter-spacing: 1.5px;
+            font-size: 12px;
+            padding: 7px 16px;
+            margin-bottom: 22px;
+        }
+
+        /* Title — corporate scale, tight tracking. */
+        .hero--premium .hero-title {
+            font-size: clamp(2.4rem, 5vw, 4rem);
+            font-weight: 800;
+            letter-spacing: -0.025em;
+            margin-bottom: 14px;
+        }
+
+        /* Subtitle — Montserrat, balanced weight, comfortable measure. */
+        .hero--premium .hero-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: clamp(1.1rem, 2vw, 1.45rem);
+            line-height: 1.35;
+            color: var(--accent-light);
+            max-width: 620px;
+            margin-bottom: 20px;
+        }
+
+        /* Description — lighter, more readable. */
+        .hero--premium .hero-description {
+            max-width: 680px;
+            font-size: clamp(0.97rem, 1.2vw, 1.08rem);
+            font-weight: 300;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.82);
+            margin-bottom: 34px;
+        }
+
+        /* Buttons — elegant, restrained, on-brand. */
+        .hero--premium .hero-buttons {
+            gap: 14px;
+            margin-bottom: 8px;
+        }
+        .hero--premium .hero-btn-primary {
+            background: var(--accent-dark);
+            color: #fff;
+            border: 1px solid rgba(94, 234, 212, 0.35);
+            box-shadow: 0 10px 26px rgba(15, 118, 110, 0.30);
+            font-size: 14.5px;
+            padding: 13px 26px;
+        }
+        .hero--premium .hero-btn-primary:hover,
+        .hero--premium .hero-btn-primary:focus-visible {
+            background: var(--accent);
+            color: var(--navy);
+            box-shadow: 0 12px 30px rgba(45, 212, 191, 0.32);
+            transform: translateY(-2px);
+        }
+        /* WhatsApp — professional outline, calm green icon (not neon). */
+        .hero--premium .hero-btn-whatsapp {
+            background: rgba(255, 255, 255, 0.04);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.28);
+            box-shadow: none;
+            font-size: 14.5px;
+            padding: 13px 26px;
+        }
+        .hero--premium .hero-btn-whatsapp i {
+            color: #34d399;
+        }
+        .hero--premium .hero-btn-whatsapp:hover,
+        .hero--premium .hero-btn-whatsapp:focus-visible {
+            background: rgba(255, 255, 255, 0.10);
+            border-color: rgba(255, 255, 255, 0.5);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        /* Feature cards / badges replacing the basic text icons. */
+        .hero--premium .hero-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            list-style: none;
+            margin: 36px 0 0;
+            padding: 30px 0 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+        }
+        .hero--premium .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex: 1 1 0;
+            min-width: 170px;
+            padding: 13px 16px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            border-radius: 14px;
+            transition: var(--transition);
+        }
+        .hero--premium .hero-feature:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(45, 212, 191, 0.30);
+            transform: translateY(-2px);
+        }
+        .hero--premium .hero-feature-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 11px;
+            background: rgba(45, 212, 191, 0.12);
+            border: 1px solid rgba(45, 212, 191, 0.25);
+            color: var(--accent-light);
+            font-size: 16px;
+        }
+        .hero--premium .hero-feature-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13.5px;
+            font-weight: 600;
+            line-height: 1.3;
+            color: rgba(255, 255, 255, 0.92);
+        }
+
+        /* Trust strip — discreet international reach line. */
+        .hero--premium .hero-strip {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px;
+            margin-top: 24px;
+        }
+        .hero--premium .hero-strip span {
+            font-size: 11.5px;
+            font-weight: 500;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.58);
+        }
+        .hero--premium .hero-strip span:not(:last-child)::after {
+            content: "•";
+            margin-left: 8px;
+            color: var(--accent);
+            opacity: 0.55;
+        }
+
+        /* ---- Responsive ---- */
+        @media (max-width: 768px) {
+            .hero--premium .hero-card {
+                max-width: 100%;
+                padding: 24px 20px;
+                background: linear-gradient(150deg, rgba(7, 24, 39, 0.72), rgba(16, 42, 67, 0.55));
+            }
+            .hero--premium .hero-bg {
+                background:
+                    linear-gradient(180deg, rgba(7, 24, 39, 0.88) 0%, rgba(16, 42, 67, 0.80) 100%),
+                    url('assets/images/hero.jpg') center/cover no-repeat;
+            }
+            .hero--premium .hero-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .hero--premium .hero-buttons .btn {
+                width: 100%;
+            }
+            .hero--premium .hero-features {
+                flex-direction: column;
+            }
+            .hero--premium .hero-feature {
+                width: 100%;
+            }
+            .hero--premium .hero-strip {
+                gap: 6px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .hero--premium .hero-content { animation: none; }
+        }
+    </style>
 </head>
 <body>
 
@@ -233,26 +472,45 @@
     <main id="main-content">
 
         <!-- ===== HERO SECTION ===== -->
-        <section id="hero-section" class="hero" aria-labelledby="hero-title">
+        <section id="hero-section" class="hero hero--premium" aria-labelledby="hero-title">
             <div class="hero-bg" aria-hidden="true"></div>
             <div class="hero-overlay" aria-hidden="true"></div>
             <div class="container hero-inner">
-                <div class="hero-content">
+                <div class="hero-content hero-card">
+                    <span class="hero-accent-line" aria-hidden="true"></span>
                     <span class="hero-tag">Conseil • Import / Export • Commerce International</span>
                     <h1 id="hero-title" class="hero-title">AFIM Consulting</h1>
                     <p class="hero-subtitle">Votre partenaire stratégique en import, export et développement commercial international</p>
                     <p class="hero-description">Nous accompagnons les entreprises, exportateurs, importateurs, coopératives, artisans et porteurs de projets dans leurs démarches commerciales, administratives et logistiques — depuis le Maroc vers l'Afrique, l'Europe, l'Asie, les États-Unis et le Canada.</p>
 
                     <div class="hero-buttons">
-                        <a href="#contact-section" class="btn btn-primary"><i class="fas fa-calendar-check" aria-hidden="true"></i> Demander une consultation</a>
-                        <a href="https://wa.me/212763738280?text=Bonjour%20AFIM%20Consulting%2C%20je%20souhaite%20avoir%20des%20informations%20concernant%20vos%20services%20d%E2%80%99accompagnement%20import%2Fexport." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contacter AFIM Consulting sur WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i> Contacter sur WhatsApp</a>
+                        <a href="#contact-section" class="btn btn-primary hero-btn-primary"><i class="fas fa-calendar-check" aria-hidden="true"></i> Demander une consultation</a>
+                        <a href="https://wa.me/212763738280?text=Bonjour%20AFIM%20Consulting%2C%20je%20souhaite%20avoir%20des%20informations%20concernant%20vos%20services%20d%E2%80%99accompagnement%20import%2Fexport." class="btn btn-whatsapp hero-btn-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contacter AFIM Consulting sur WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i> Contacter sur WhatsApp</a>
                     </div>
 
-                    <ul class="hero-trust">
-                        <li class="trust-item"><i class="fas fa-globe" aria-hidden="true"></i> Marchés internationaux</li>
-                        <li class="trust-item"><i class="fas fa-file-signature" aria-hidden="true"></i> Formalités export</li>
-                        <li class="trust-item"><i class="fas fa-truck-fast" aria-hidden="true"></i> Transport de marchandises</li>
+                    <ul class="hero-features" aria-label="Domaines d'expertise">
+                        <li class="hero-feature">
+                            <span class="hero-feature-icon"><i class="fas fa-globe" aria-hidden="true"></i></span>
+                            <span class="hero-feature-text">Marchés internationaux</span>
+                        </li>
+                        <li class="hero-feature">
+                            <span class="hero-feature-icon"><i class="fas fa-file-signature" aria-hidden="true"></i></span>
+                            <span class="hero-feature-text">Formalités export</span>
+                        </li>
+                        <li class="hero-feature">
+                            <span class="hero-feature-icon"><i class="fas fa-truck-fast" aria-hidden="true"></i></span>
+                            <span class="hero-feature-text">Transport de marchandises</span>
+                        </li>
                     </ul>
+
+                    <div class="hero-strip" aria-label="Zones d'intervention">
+                        <span>Maroc</span>
+                        <span>Afrique</span>
+                        <span>Europe</span>
+                        <span>Asie</span>
+                        <span>États-Unis</span>
+                        <span>Canada</span>
+                    </div>
                 </div>
             </div>
             <div class="hero-scroll" aria-hidden="true">
