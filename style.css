@@ -871,6 +871,13 @@ section { padding: 100px 0; }
     justify-content: center;
     font-size: 32px;
     margin-bottom: 22px;
+    box-shadow: 0 14px 30px rgba(7, 24, 39, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.market-flag .market-icon {
+    width: 42px;
+    height: 42px;
+    display: block;
 }
 
 .market-card h3 {
@@ -1974,6 +1981,7 @@ section { padding: 100px 0; }
     .market-card { padding: 30px 22px; }
     .market-card h3 { font-size: 19px; }
     .market-flag { width: 64px; height: 64px; font-size: 26px; }
+    .market-flag .market-icon { width: 36px; height: 36px; }
     .export-points { padding: 26px 20px; }
 
     .formality-note {
