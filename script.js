@@ -11,6 +11,7 @@
         initHeader();
         initMobileMenu();
         initFAQ();
+        initFormalites();
         initBackToTop();
         initActiveNav();
         initSmoothScroll();
@@ -102,6 +103,34 @@
                     btn.setAttribute('aria-expanded', 'true');
                 }
             });
+        });
+    }
+
+    /* ----- Formalités : card selection + detail panel ----- */
+    function initFormalites() {
+        const cards = document.querySelectorAll('.formality-card');
+        const panels = document.querySelectorAll('.formality-detail');
+        if (!cards.length || !panels.length) return;
+
+        const select = (card) => {
+            const id = card.getAttribute('aria-controls');
+
+            cards.forEach(c => {
+                const isActive = c === card;
+                c.classList.toggle('active', isActive);
+                c.setAttribute('aria-selected', isActive ? 'true' : 'false');
+            });
+
+            panels.forEach(p => {
+                const isActive = p.id === id;
+                p.classList.toggle('active', isActive);
+                if (isActive) p.removeAttribute('hidden');
+                else p.setAttribute('hidden', '');
+            });
+        };
+
+        cards.forEach(card => {
+            card.addEventListener('click', () => select(card));
         });
     }
 

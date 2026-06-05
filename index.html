@@ -779,31 +779,224 @@
                     <p class="section-subtitle">Nous vous assistons dans l'organisation et le suivi de vos démarches administratives selon votre activité.</p>
                 </div>
 
-                <div class="formalites-grid">
-                    <div class="formality-card">
+                <p class="formalites-instruction"><i class="fas fa-hand-pointer" aria-hidden="true"></i> Sélectionnez une démarche pour comprendre son rôle et découvrir comment nous vous accompagnons.</p>
+
+                <div class="formalites-grid" role="tablist" aria-label="Démarches administratives">
+                    <button type="button" class="formality-card active" data-formality="foodex" role="tab" aria-selected="true" aria-controls="fd-foodex" id="tab-foodex">
                         <i class="fas fa-leaf" aria-hidden="true"></i>
                         <h3>Inscription FOODEX</h3>
-                    </div>
-                    <div class="formality-card">
+                        <span class="formality-chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                    <button type="button" class="formality-card" data-formality="portnet" role="tab" aria-selected="false" aria-controls="fd-portnet" id="tab-portnet">
                         <i class="fas fa-anchor" aria-hidden="true"></i>
                         <h3>Douane / PortNet</h3>
-                    </div>
-                    <div class="formality-card">
+                        <span class="formality-chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                    <button type="button" class="formality-card" data-formality="rna" role="tab" aria-selected="false" aria-controls="fd-rna" id="tab-rna">
                         <i class="fas fa-id-card" aria-hidden="true"></i>
                         <h3>Inscription RNA</h3>
-                    </div>
-                    <div class="formality-card">
+                        <span class="formality-chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                    <button type="button" class="formality-card" data-formality="artisanat" role="tab" aria-selected="false" aria-controls="fd-artisanat" id="tab-artisanat">
                         <i class="fas fa-palette" aria-hidden="true"></i>
                         <h3>Inscription des exportateurs à l'Artisanat</h3>
-                    </div>
-                    <div class="formality-card">
+                        <span class="formality-chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                    <button type="button" class="formality-card" data-formality="documents" role="tab" aria-selected="false" aria-controls="fd-documents" id="tab-documents">
                         <i class="fas fa-file-alt" aria-hidden="true"></i>
                         <h3>Organisation des documents export</h3>
-                    </div>
-                    <div class="formality-card">
+                        <span class="formality-chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                    <button type="button" class="formality-card" data-formality="suivi" role="tab" aria-selected="false" aria-controls="fd-suivi" id="tab-suivi">
                         <i class="fas fa-clipboard-check" aria-hidden="true"></i>
                         <h3>Suivi des démarches</h3>
-                    </div>
+                        <span class="formality-chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                </div>
+
+                <!-- ===== Detail panels (one visible at a time) ===== -->
+                <div class="formality-detail-wrap">
+
+                    <article class="formality-detail active" id="fd-foodex" role="tabpanel" aria-labelledby="tab-foodex" tabindex="0">
+                        <div class="formality-detail-card">
+                            <div class="formality-detail-head">
+                                <span class="formality-detail-icon"><i class="fas fa-leaf" aria-hidden="true"></i></span>
+                                <h3>Inscription FOODEX</h3>
+                            </div>
+                            <p class="formality-detail-intro">FOODEX est l'établissement public marocain chargé du contrôle et de la coordination des exportations de produits alimentaires. Une inscription auprès de FOODEX est nécessaire pour exporter légalement de nombreux produits agroalimentaires depuis le Maroc.</p>
+                            <div class="formality-detail-grid">
+                                <div class="formality-detail-block">
+                                    <h4><i class="fas fa-star" aria-hidden="true"></i> Pourquoi c'est important</h4>
+                                    <p>Sans cette inscription, vous ne pouvez pas exporter vos produits alimentaires dans les règles. Elle conditionne l'accès aux marchés étrangers et rassure vos acheteurs sur la conformité de vos produits.</p>
+                                </div>
+                                <div class="formality-detail-block">
+                                    <h4><i class="fas fa-handshake-angle" aria-hidden="true"></i> Notre accompagnement</h4>
+                                    <p>Nous déterminons si votre activité est concernée, préparons et organisons les documents requis, constituons votre dossier d'inscription et suivons son avancement jusqu'à l'obtention.</p>
+                                </div>
+                            </div>
+                            <div class="formality-detail-examples">
+                                <h4>Exemples concrets</h4>
+                                <ul>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Vérification de l'éligibilité de vos produits</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Préparation des documents de l'entreprise et du produit</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Constitution et dépôt du dossier d'inscription</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Suivi des échanges avec l'organisme</li>
+                                </ul>
+                            </div>
+                            <a href="#contact-section" class="btn btn-primary"><i class="fas fa-arrow-right" aria-hidden="true"></i> Demander un accompagnement</a>
+                        </div>
+                    </article>
+
+                    <article class="formality-detail" id="fd-portnet" role="tabpanel" aria-labelledby="tab-portnet" tabindex="0" hidden>
+                        <div class="formality-detail-card">
+                            <div class="formality-detail-head">
+                                <span class="formality-detail-icon"><i class="fas fa-anchor" aria-hidden="true"></i></span>
+                                <h3>Douane / PortNet</h3>
+                            </div>
+                            <p class="formality-detail-intro">PortNet est le guichet unique électronique du commerce extérieur marocain. Il centralise les démarches douanières et portuaires — déclarations, documents, échanges avec la douane — sur une seule plateforme.</p>
+                            <div class="formality-detail-grid">
+                                <div class="formality-detail-block">
+                                    <h4><i class="fas fa-star" aria-hidden="true"></i> Pourquoi c'est important</h4>
+                                    <p>Toute opération d'import ou d'export passe par la douane. Une inscription PortNet et des déclarations bien préparées évitent les blocages au port, les retards et les surcoûts de stockage.</p>
+                                </div>
+                                <div class="formality-detail-block">
+                                    <h4><i class="fas fa-handshake-angle" aria-hidden="true"></i> Notre accompagnement</h4>
+                                    <p>Nous vous orientons dans l'inscription à PortNet, l'organisation de vos documents douaniers et la compréhension des étapes, afin que vos marchandises circulent sans blocage.</p>
+                                </div>
+                            </div>
+                            <div class="formality-detail-examples">
+                                <h4>Exemples concrets</h4>
+                                <ul>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Création et configuration du compte PortNet</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Organisation des documents douaniers (facture, connaissement…)</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Orientation sur les déclarations import / export</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Suivi du dédouanement de vos marchandises</li>
+                                </ul>
+                            </div>
+                            <a href="#contact-section" class="btn btn-primary"><i class="fas fa-arrow-right" aria-hidden="true"></i> Demander un accompagnement</a>
+                        </div>
+                    </article>
+
+                    <article class="formality-detail" id="fd-rna" role="tabpanel" aria-labelledby="tab-rna" tabindex="0" hidden>
+                        <div class="formality-detail-card">
+                            <div class="formality-detail-head">
+                                <span class="formality-detail-icon"><i class="fas fa-id-card" aria-hidden="true"></i></span>
+                                <h3>Inscription RNA</h3>
+                            </div>
+                            <p class="formality-detail-intro">L'inscription RNA est une démarche d'enregistrement officiel qui permet d'identifier et de reconnaître votre activité auprès de l'administration concernée. Selon votre profil et votre secteur, elle peut être requise pour exercer ou pour accéder à certaines opérations commerciales.</p>
+                            <div class="formality-detail-grid">
+                                <div class="formality-detail-block">
+                                    <h4><i class="fas fa-star" aria-hidden="true"></i> Pourquoi c'est important</h4>
+                                    <p>Une inscription en règle donne une existence officielle à votre activité, facilite vos démarches ultérieures et renforce votre crédibilité auprès des partenaires et des administrations.</p>
+                                </div>
+                                <div class="formality-detail-block">
+                                    <h4><i class="fas fa-handshake-angle" aria-hidden="true"></i> Notre accompagnement</h4>
+                                    <p>Nous déterminons si cette inscription vous concerne, préparons les pièces nécessaires et vous accompagnons dans la constitution et le suivi du dossier.</p>
+                                </div>
+                            </div>
+                            <div class="formality-detail-examples">
+                                <h4>Exemples concrets</h4>
+                                <ul>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Vérification de la nécessité de l'inscription selon votre profil</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Préparation des pièces administratives</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Constitution du dossier d'enregistrement</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Suivi jusqu'à la validation</li>
+                                </ul>
+                            </div>
+                            <a href="#contact-section" class="btn btn-primary"><i class="fas fa-arrow-right" aria-hidden="true"></i> Demander un accompagnement</a>
+                        </div>
+                    </article>
+
+                    <article class="formality-detail" id="fd-artisanat" role="tabpanel" aria-labelledby="tab-artisanat" tabindex="0" hidden>
+                        <div class="formality-detail-card">
+                            <div class="formality-detail-head">
+                                <span class="formality-detail-icon"><i class="fas fa-palette" aria-hidden="true"></i></span>
+                                <h3>Inscription des exportateurs à l'Artisanat</h3>
+                            </div>
+                            <p class="formality-detail-intro">Les entreprises et artisans qui exportent des produits artisanaux peuvent devoir s'enregistrer auprès des autorités de l'artisanat. Cette inscription reconnaît officiellement votre statut d'exportateur de produits artisanaux.</p>
+                            <div class="formality-detail-grid">
+                                <div class="formality-detail-block">
+                                    <h4><i class="fas fa-star" aria-hidden="true"></i> Pourquoi c'est important</h4>
+                                    <p>Elle vous permet d'exporter vos produits artisanaux dans un cadre reconnu, d'accéder à certains dispositifs d'appui et de valoriser l'authenticité de votre savoir-faire auprès des acheteurs étrangers.</p>
+                                </div>
+                                <div class="formality-detail-block">
+                                    <h4><i class="fas fa-handshake-angle" aria-hidden="true"></i> Notre accompagnement</h4>
+                                    <p>Nous vous guidons dans les démarches d'inscription, la préparation des documents liés à votre activité artisanale et le suivi de votre dossier.</p>
+                                </div>
+                            </div>
+                            <div class="formality-detail-examples">
+                                <h4>Exemples concrets</h4>
+                                <ul>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Vérification de votre éligibilité en tant qu'exportateur artisan</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Préparation des documents de l'entreprise et des produits</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Constitution du dossier d'inscription</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Suivi des démarches auprès des autorités concernées</li>
+                                </ul>
+                            </div>
+                            <a href="#contact-section" class="btn btn-primary"><i class="fas fa-arrow-right" aria-hidden="true"></i> Demander un accompagnement</a>
+                        </div>
+                    </article>
+
+                    <article class="formality-detail" id="fd-documents" role="tabpanel" aria-labelledby="tab-documents" tabindex="0" hidden>
+                        <div class="formality-detail-card">
+                            <div class="formality-detail-head">
+                                <span class="formality-detail-icon"><i class="fas fa-file-alt" aria-hidden="true"></i></span>
+                                <h3>Organisation des documents export</h3>
+                            </div>
+                            <p class="formality-detail-intro">Toute exportation s'accompagne d'un ensemble de documents commerciaux et administratifs : facture, liste de colisage, certificats, documents de transport… Bien préparés, ils garantissent une opération fluide.</p>
+                            <div class="formality-detail-grid">
+                                <div class="formality-detail-block">
+                                    <h4><i class="fas fa-star" aria-hidden="true"></i> Pourquoi c'est important</h4>
+                                    <p>Un dossier export incomplet ou mal organisé peut bloquer une marchandise, retarder un paiement ou faire échouer une vente. Des documents clairs rassurent acheteurs, banques et douanes.</p>
+                                </div>
+                                <div class="formality-detail-block">
+                                    <h4><i class="fas fa-handshake-angle" aria-hidden="true"></i> Notre accompagnement</h4>
+                                    <p>Nous vous aidons à identifier les documents nécessaires à chaque opération, à les organiser et à les vérifier avant expédition, pour des dossiers complets et crédibles.</p>
+                                </div>
+                            </div>
+                            <div class="formality-detail-examples">
+                                <h4>Exemples concrets</h4>
+                                <ul>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Facture commerciale et liste de colisage</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Certificats et documents d'origine</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Documents de transport (connaissement, LTA…)</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Vérification de la cohérence du dossier</li>
+                                </ul>
+                            </div>
+                            <a href="#contact-section" class="btn btn-primary"><i class="fas fa-arrow-right" aria-hidden="true"></i> Demander un accompagnement</a>
+                        </div>
+                    </article>
+
+                    <article class="formality-detail" id="fd-suivi" role="tabpanel" aria-labelledby="tab-suivi" tabindex="0" hidden>
+                        <div class="formality-detail-card">
+                            <div class="formality-detail-head">
+                                <span class="formality-detail-icon"><i class="fas fa-clipboard-check" aria-hidden="true"></i></span>
+                                <h3>Suivi des démarches</h3>
+                            </div>
+                            <p class="formality-detail-intro">Une démarche administrative ne s'arrête pas au dépôt du dossier. Elle demande un suivi régulier : relances, compléments éventuels, réponses des organismes et respect des délais.</p>
+                            <div class="formality-detail-grid">
+                                <div class="formality-detail-block">
+                                    <h4><i class="fas fa-star" aria-hidden="true"></i> Pourquoi c'est important</h4>
+                                    <p>Un bon suivi évite les dossiers oubliés ou bloqués, réduit les délais et vous donne une visibilité claire sur l'avancement de chaque démarche.</p>
+                                </div>
+                                <div class="formality-detail-block">
+                                    <h4><i class="fas fa-handshake-angle" aria-hidden="true"></i> Notre accompagnement</h4>
+                                    <p>Nous assurons le suivi de vos démarches, vous tenons informé de leur avancement, anticipons les compléments à fournir et vous orientons à chaque étape jusqu'à leur aboutissement.</p>
+                                </div>
+                            </div>
+                            <div class="formality-detail-examples">
+                                <h4>Exemples concrets</h4>
+                                <ul>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Suivi de l'avancement de chaque dossier</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Anticipation des documents complémentaires</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Points réguliers sur l'état des démarches</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Orientation jusqu'à l'aboutissement</li>
+                                </ul>
+                            </div>
+                            <a href="#contact-section" class="btn btn-primary"><i class="fas fa-arrow-right" aria-hidden="true"></i> Demander un accompagnement</a>
+                        </div>
+                    </article>
+
                 </div>
 
                 <div class="formality-note">
