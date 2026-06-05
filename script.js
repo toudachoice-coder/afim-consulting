@@ -11,7 +11,6 @@
         initHeader();
         initMobileMenu();
         initFAQ();
-        initWhyChoose();
         initBackToTop();
         initActiveNav();
         initSmoothScroll();
@@ -102,47 +101,6 @@
                     item.classList.add('active');
                     btn.setAttribute('aria-expanded', 'true');
                 }
-            });
-        });
-    }
-
-    /* ----- "Pourquoi choisir" advantage tabs ----- */
-    function initWhyChoose() {
-        const tabs = Array.from(document.querySelectorAll('.why-card[role="tab"]'));
-        const panels = Array.from(document.querySelectorAll('.why-detail'));
-        if (!tabs.length || !panels.length) return;
-
-        const select = (tab, setFocus) => {
-            const panelId = tab.getAttribute('aria-controls');
-
-            tabs.forEach(t => {
-                const active = t === tab;
-                t.classList.toggle('active', active);
-                t.setAttribute('aria-selected', active ? 'true' : 'false');
-                t.tabIndex = active ? 0 : -1;
-            });
-
-            panels.forEach(p => {
-                const active = p.id === panelId;
-                p.classList.toggle('active', active);
-                p.hidden = !active;
-            });
-
-            if (setFocus) tab.focus();
-        };
-
-        tabs.forEach((tab, index) => {
-            tab.addEventListener('click', () => select(tab, false));
-
-            tab.addEventListener('keydown', (e) => {
-                let next = -1;
-                if (e.key === 'ArrowRight' || e.key === 'ArrowDown') next = (index + 1) % tabs.length;
-                else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') next = (index - 1 + tabs.length) % tabs.length;
-                else if (e.key === 'Home') next = 0;
-                else if (e.key === 'End') next = tabs.length - 1;
-                if (next === -1) return;
-                e.preventDefault();
-                select(tabs[next], true);
             });
         });
     }
