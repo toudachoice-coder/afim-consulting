@@ -11,6 +11,7 @@
         initHeader();
         initMobileMenu();
         initFAQ();
+        initFormalites();
         initBackToTop();
         initActiveNav();
         initSmoothScroll();
@@ -105,6 +106,45 @@
         });
     }
 
+    /* ----- Formalités procedure guide (tabs on desktop / accordion on mobile) ----- */
+    function initFormalites() {
+        const list = document.querySelector('.proc-list');
+        if (!list) return;
+        const items = Array.from(list.querySelectorAll('.proc-item'));
+        const heads = Array.from(list.querySelectorAll('.proc-head'));
+        if (!items.length) return;
+
+        const select = (item, setFocus) => {
+            items.forEach(it => {
+                const active = it === item;
+                it.classList.toggle('is-active', active);
+                const head = it.querySelector('.proc-head');
+                if (head) head.setAttribute('aria-expanded', active ? 'true' : 'false');
+            });
+            if (setFocus) {
+                const head = item.querySelector('.proc-head');
+                if (head) head.focus();
+            }
+        };
+
+        heads.forEach((head, index) => {
+            const item = head.closest('.proc-item');
+
+            head.addEventListener('click', () => select(item, false));
+
+            head.addEventListener('keydown', (e) => {
+                let next = -1;
+                if (e.key === 'ArrowDown' || e.key === 'ArrowRight') next = (index + 1) % heads.length;
+                else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') next = (index - 1 + heads.length) % heads.length;
+                else if (e.key === 'Home') next = 0;
+                else if (e.key === 'End') next = heads.length - 1;
+                if (next === -1) return;
+                e.preventDefault();
+                select(heads[next].closest('.proc-item'), true);
+            });
+        });
+    }
+
     /* ----- Back to top button ----- */
     function initBackToTop() {
         const btn = document.getElementById('back-to-top');
@@ -169,7 +209,7 @@
     function initScrollReveal() {
         const selectors = [
             '.badge-card', '.service-card', '.sector-card',
-            '.formality-card', '.method-step', '.why-card',
+            '.method-step', '.why-card',
             '.market-card', '.value-card', '.faq-item',
             '.about-image', '.about-content',
             '.transport-content', '.transport-visual',
