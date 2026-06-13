@@ -7,8 +7,8 @@
     "display": "standalone",
     "orientation": "portrait",
     "lang": "fr",
-    "background_color": "#071827",
-    "theme_color": "#071827",
+    "background_color": "#FFFFFF",
+    "theme_color": "#145A32",
     "icons": [
         {
             "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='30' fill='%23071827'/%3E%3Ctext x='96' y='130' font-family='Montserrat,Arial' font-size='100' font-weight='800' text-anchor='middle' fill='%232DD4BF'%3EA%3C/text%3E%3C/svg%3E",
