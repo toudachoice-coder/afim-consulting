@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="theme-color" content="#0B1F3A">
+    <meta name="theme-color" content="#145A32">
     <meta name="format-detection" content="telephone=yes">
 
     <!-- ===== SEO PRIMARY ===== -->
@@ -37,8 +37,8 @@
     <meta name="twitter:image" content="assets/images/hero.jpg">
 
     <!-- ===== Favicon ===== -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='15' fill='%230B1F3A'/%3E%3Ctext x='50' y='68' font-family='Montserrat,Arial' font-size='52' font-weight='800' text-anchor='middle' fill='%232DD4BF'%3EA%3C/text%3E%3C/svg%3E">
-    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230B1F3A'/%3E%3Ctext x='50' y='68' font-family='Montserrat,Arial' font-size='52' font-weight='800' text-anchor='middle' fill='%232DD4BF'%3EA%3C/text%3E%3C/svg%3E">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='15' fill='%23145A32'/%3E%3Ctext x='50' y='68' font-family='Montserrat,Arial' font-size='52' font-weight='800' text-anchor='middle' fill='%23FFFFFF'%3EA%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23145A32'/%3E%3Ctext x='50' y='68' font-family='Montserrat,Arial' font-size='52' font-weight='800' text-anchor='middle' fill='%23FFFFFF'%3EA%3C/text%3E%3C/svg%3E">
     <link rel="manifest" href="manifest.webmanifest">
 
     <!-- ===== Performance: Preconnect ===== -->
@@ -155,16 +155,16 @@
             background:
                 linear-gradient(
                     100deg,
-                    rgba(7, 24, 39, 0.94) 0%,
-                    rgba(7, 24, 39, 0.82) 32%,
-                    rgba(16, 42, 67, 0.58) 66%,
-                    rgba(16, 42, 67, 0.42) 100%
+                    rgba(16, 61, 35, 0.94) 0%,
+                    rgba(16, 61, 35, 0.82) 32%,
+                    rgba(14, 63, 35, 0.58) 66%,
+                    rgba(14, 63, 35, 0.42) 100%
                 ),
                 linear-gradient(
                     180deg,
-                    rgba(7, 24, 39, 0.20) 0%,
-                    rgba(7, 24, 39, 0.00) 35%,
-                    rgba(7, 24, 39, 0.45) 100%
+                    rgba(16, 61, 35, 0.20) 0%,
+                    rgba(16, 61, 35, 0.00) 35%,
+                    rgba(16, 61, 35, 0.45) 100%
                 ),
                 url('assets/images/hero.jpg') center/cover no-repeat;
         }
@@ -172,7 +172,7 @@
         /* Subtle, restrained accent glow — no heavy color washes. */
         .hero--premium .hero-overlay {
             background:
-                radial-gradient(circle at 88% 18%, rgba(45, 212, 191, 0.10), transparent 45%);
+                radial-gradient(circle at 88% 18%, rgba(31, 122, 76, 0.10), transparent 45%);
         }
 
         /* Structured glass content card on the left. */
@@ -181,11 +181,11 @@
         }
         .hero--premium .hero-card {
             padding: clamp(28px, 3.5vw, 48px);
-            background: linear-gradient(150deg, rgba(7, 24, 39, 0.55), rgba(16, 42, 67, 0.30));
+            background: linear-gradient(150deg, rgba(16, 61, 35, 0.55), rgba(14, 63, 35, 0.30));
             border: 1px solid rgba(255, 255, 255, 0.12);
             border-radius: 22px;
             box-shadow:
-                0 30px 70px rgba(3, 12, 22, 0.45),
+                0 30px 70px rgba(6, 26, 15, 0.45),
                 inset 0 1px 0 rgba(255, 255, 255, 0.06);
             -webkit-backdrop-filter: blur(14px) saturate(120%);
             backdrop-filter: blur(14px) saturate(120%);
@@ -203,8 +203,8 @@
 
         /* Refined eyebrow tag — quieter than the original pill. */
         .hero--premium .hero-tag {
-            background: rgba(45, 212, 191, 0.08);
-            border: 1px solid rgba(45, 212, 191, 0.22);
+            background: rgba(31, 122, 76, 0.08);
+            border: 1px solid rgba(31, 122, 76, 0.22);
             color: var(--accent-light);
             letter-spacing: 1.5px;
             font-size: 12px;
@@ -212,31 +212,33 @@
             margin-bottom: 22px;
         }
 
-        /* Title — corporate scale, tight tracking. */
+        /* Title — strong but not overwhelming, tight tracking. */
         .hero--premium .hero-title {
-            font-size: clamp(2.4rem, 5vw, 4rem);
+            font-size: clamp(2.05rem, 4vw, 3.25rem);
             font-weight: 800;
-            letter-spacing: -0.025em;
-            margin-bottom: 14px;
-        }
-
-        /* Subtitle — Montserrat, balanced weight, comfortable measure. */
-        .hero--premium .hero-subtitle {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
-            font-size: clamp(1.1rem, 2vw, 1.45rem);
-            line-height: 1.35;
-            color: var(--accent-light);
-            max-width: 620px;
+            line-height: 1.12;
+            letter-spacing: -0.02em;
+            max-width: 18ch;
             margin-bottom: 20px;
         }
 
-        /* Description — lighter, more readable. */
+        /* Subtitle — green accent, visible but restrained; clear gap above. */
+        .hero--premium .hero-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: clamp(1rem, 1.6vw, 1.22rem);
+            line-height: 1.45;
+            color: var(--accent-light);
+            max-width: 540px;
+            margin-bottom: 26px;
+        }
+
+        /* Description — short, readable, narrow measure to keep it light. */
         .hero--premium .hero-description {
-            max-width: 680px;
-            font-size: clamp(0.97rem, 1.2vw, 1.08rem);
+            max-width: 540px;
+            font-size: clamp(0.96rem, 1.1vw, 1.05rem);
             font-weight: 300;
-            line-height: 1.8;
+            line-height: 1.75;
             color: rgba(255, 255, 255, 0.82);
             margin-bottom: 34px;
         }
@@ -249,16 +251,16 @@
         .hero--premium .hero-btn-primary {
             background: var(--accent-dark);
             color: #fff;
-            border: 1px solid rgba(94, 234, 212, 0.35);
-            box-shadow: 0 10px 26px rgba(15, 118, 110, 0.30);
+            border: 1px solid rgba(141, 232, 184, 0.35);
+            box-shadow: 0 10px 26px rgba(20, 90, 50, 0.30);
             font-size: 14.5px;
             padding: 13px 26px;
         }
         .hero--premium .hero-btn-primary:hover,
         .hero--premium .hero-btn-primary:focus-visible {
             background: var(--accent);
-            color: var(--navy);
-            box-shadow: 0 12px 30px rgba(45, 212, 191, 0.32);
+            color: #fff;
+            box-shadow: 0 12px 30px rgba(31, 122, 76, 0.32);
             transform: translateY(-2px);
         }
         /* WhatsApp — professional outline, calm green icon (not neon). */
@@ -287,10 +289,6 @@
             height: 20px;
             color: #34d399;
         }
-        .hero--premium .hero-feature-icon .hero-ico {
-            width: 20px;
-            height: 20px;
-        }
         .hero--premium .hero-btn-whatsapp:hover,
         .hero--premium .hero-btn-whatsapp:focus-visible {
             background: rgba(255, 255, 255, 0.10);
@@ -299,86 +297,29 @@
             transform: translateY(-2px);
         }
 
-        /* Feature cards / badges replacing the basic text icons. */
-        .hero--premium .hero-features {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
-            list-style: none;
-            margin: 36px 0 0;
-            padding: 30px 0 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.12);
-        }
-        .hero--premium .hero-feature {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            flex: 1 1 0;
-            min-width: 170px;
-            padding: 13px 16px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.10);
-            border-radius: 14px;
-            transition: var(--transition);
-        }
-        .hero--premium .hero-feature:hover {
-            background: rgba(255, 255, 255, 0.08);
-            border-color: rgba(45, 212, 191, 0.30);
-            transform: translateY(-2px);
-        }
-        .hero--premium .hero-feature-icon {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            width: 40px;
-            height: 40px;
-            border-radius: 11px;
-            background: rgba(45, 212, 191, 0.12);
-            border: 1px solid rgba(45, 212, 191, 0.25);
-            color: var(--accent-light);
-            font-size: 16px;
-        }
-        .hero--premium .hero-feature-text {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 13.5px;
-            font-weight: 600;
-            line-height: 1.3;
-            color: rgba(255, 255, 255, 0.92);
-        }
-
-        /* Trust strip — discreet international reach line. */
-        .hero--premium .hero-strip {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 8px;
-            margin-top: 24px;
-        }
-        .hero--premium .hero-strip span {
-            font-size: 11.5px;
-            font-weight: 500;
-            letter-spacing: 1.2px;
-            text-transform: uppercase;
-            color: rgba(255, 255, 255, 0.58);
-        }
-        .hero--premium .hero-strip span:not(:last-child)::after {
-            content: "•";
-            margin-left: 8px;
-            color: var(--accent);
-            opacity: 0.55;
-        }
-
         /* ---- Responsive ---- */
         @media (max-width: 768px) {
             .hero--premium .hero-card {
                 max-width: 100%;
                 padding: 24px 20px;
-                background: linear-gradient(150deg, rgba(7, 24, 39, 0.72), rgba(16, 42, 67, 0.55));
+                background: linear-gradient(150deg, rgba(16, 61, 35, 0.72), rgba(14, 63, 35, 0.55));
+            }
+            /* Keep the title compact so it doesn't break into too many lines. */
+            .hero--premium .hero-title {
+                font-size: clamp(1.8rem, 7.4vw, 2.2rem);
+                max-width: 100%;
+                margin-bottom: 16px;
+            }
+            .hero--premium .hero-subtitle {
+                font-size: 1.02rem;
+                margin-bottom: 20px;
+            }
+            .hero--premium .hero-description {
+                margin-bottom: 28px;
             }
             .hero--premium .hero-bg {
                 background:
-                    linear-gradient(180deg, rgba(7, 24, 39, 0.88) 0%, rgba(16, 42, 67, 0.80) 100%),
+                    linear-gradient(180deg, rgba(16, 61, 35, 0.88) 0%, rgba(14, 63, 35, 0.80) 100%),
                     url('assets/images/hero.jpg') center/cover no-repeat;
             }
             .hero--premium .hero-buttons {
@@ -387,15 +328,6 @@
             }
             .hero--premium .hero-buttons .btn {
                 width: 100%;
-            }
-            .hero--premium .hero-features {
-                flex-direction: column;
-            }
-            .hero--premium .hero-feature {
-                width: 100%;
-            }
-            .hero--premium .hero-strip {
-                gap: 6px;
             }
         }
 
@@ -432,14 +364,14 @@
                     <svg class="logo-mark-svg" viewBox="0 0 48 48" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <linearGradient id="afimMarkBg" x1="0" y1="0" x2="1" y2="1">
-                                <stop offset="0" stop-color="#0B2236"/>
-                                <stop offset="1" stop-color="#1F3A56"/>
+                                <stop offset="0" stop-color="#103D26"/>
+                                <stop offset="1" stop-color="#1F7A4C"/>
                             </linearGradient>
                         </defs>
                         <rect x="1" y="1" width="46" height="46" rx="13" fill="url(#afimMarkBg)"/>
-                        <rect x="1.75" y="1.75" width="44.5" height="44.5" rx="12.25" fill="none" stroke="#5EEAD4" stroke-opacity="0.16"/>
+                        <rect x="1.75" y="1.75" width="44.5" height="44.5" rx="12.25" fill="none" stroke="#8DE8B8" stroke-opacity="0.16"/>
                         <path d="M16 36 L24 11.5 L32 36" fill="none" stroke="#FFFFFF" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M18.7 28 L29.3 28" fill="none" stroke="#2DD4BF" stroke-width="3.4" stroke-linecap="round"/>
+                        <path d="M18.7 28 L29.3 28" fill="none" stroke="#34D27F" stroke-width="3.4" stroke-linecap="round"/>
                     </svg>
                 </span>
                 <span class="logo-text">AFIM <span class="logo-accent">Consulting</span></span>
@@ -509,38 +441,14 @@
             <div class="container hero-inner">
                 <div class="hero-content hero-card">
                     <span class="hero-accent-line" aria-hidden="true"></span>
-                    <span class="hero-tag">Conseil • Import / Export • Commerce International</span>
-                    <h1 id="hero-title" class="hero-title">Accompagnement Import Export au Maroc — FOODEX, PortNet, RNA</h1>
-                    <p class="hero-subtitle">Votre partenaire stratégique en import, export et développement commercial international</p>
-                    <p class="hero-description">Nous accompagnons les entreprises, exportateurs, importateurs, coopératives, artisans et porteurs de projets dans leurs démarches commerciales, administratives et logistiques — depuis le Maroc vers l'Afrique, l'Europe, l'Asie, les États-Unis et le Canada.</p>
+                    <span class="hero-tag">Conseil • Import / Export • International</span>
+                    <h1 id="hero-title" class="hero-title">Votre partenaire import-export au Maroc</h1>
+                    <p class="hero-subtitle">Accompagnement FOODEX, PortNet, RNA et formalités internationales</p>
+                    <p class="hero-description">AFIM Consulting accompagne les entreprises, exportateurs, importateurs, coopératives et porteurs de projets dans leurs démarches administratives, commerciales et logistiques au Maroc et à l'international.</p>
 
                     <div class="hero-buttons">
                         <a href="#contact-section" class="btn btn-primary hero-btn-primary"><svg class="hero-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="m9 16 2 2 4-4"/></svg> Demander une consultation</a>
                         <a href="https://wa.me/212763738280?text=Bonjour%20AFIM%20Consulting%2C%20je%20souhaite%20avoir%20des%20informations%20concernant%20vos%20services%20d%E2%80%99accompagnement%20import%2Fexport." class="btn btn-whatsapp hero-btn-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contacter AFIM Consulting sur WhatsApp"><svg class="hero-ico" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l119.7-31.4c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-156.5zM223.9 438.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-71 18.6 19-69.3-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.5-184.6 184.5zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg> Contacter sur WhatsApp</a>
-                    </div>
-
-                    <ul class="hero-features" aria-label="Domaines d'expertise">
-                        <li class="hero-feature">
-                            <span class="hero-feature-icon"><svg class="hero-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2c2.5 2.7 4 6.3 4 10s-1.5 7.3-4 10c-2.5-2.7-4-6.3-4-10S9.5 4.7 12 2z"/></svg></span>
-                            <span class="hero-feature-text">Marchés internationaux</span>
-                        </li>
-                        <li class="hero-feature">
-                            <span class="hero-feature-icon"><svg class="hero-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h5"/><path d="M8 17h8"/></svg></span>
-                            <span class="hero-feature-text">Formalités export</span>
-                        </li>
-                        <li class="hero-feature">
-                            <span class="hero-feature-icon"><svg class="hero-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 18H3a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v11"/><path d="M14 9h4l4 4v4a1 1 0 0 1-1 1h-1"/><path d="M9 18h6"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span>
-                            <span class="hero-feature-text">Transport de marchandises</span>
-                        </li>
-                    </ul>
-
-                    <div class="hero-strip" aria-label="Zones d'intervention">
-                        <span>Maroc</span>
-                        <span>Afrique</span>
-                        <span>Europe</span>
-                        <span>Asie</span>
-                        <span>États-Unis</span>
-                        <span>Canada</span>
                     </div>
                 </div>
             </div>
@@ -1272,14 +1180,14 @@
                     <svg class="logo-mark-svg" viewBox="0 0 48 48" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <linearGradient id="afimMarkBgFooter" x1="0" y1="0" x2="1" y2="1">
-                                <stop offset="0" stop-color="#0B2236"/>
-                                <stop offset="1" stop-color="#1F3A56"/>
+                                <stop offset="0" stop-color="#103D26"/>
+                                <stop offset="1" stop-color="#1F7A4C"/>
                             </linearGradient>
                         </defs>
                         <rect x="1" y="1" width="46" height="46" rx="13" fill="url(#afimMarkBgFooter)"/>
-                        <rect x="1.75" y="1.75" width="44.5" height="44.5" rx="12.25" fill="none" stroke="#5EEAD4" stroke-opacity="0.16"/>
+                        <rect x="1.75" y="1.75" width="44.5" height="44.5" rx="12.25" fill="none" stroke="#8DE8B8" stroke-opacity="0.16"/>
                         <path d="M16 36 L24 11.5 L32 36" fill="none" stroke="#FFFFFF" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M18.7 28 L29.3 28" fill="none" stroke="#2DD4BF" stroke-width="3.4" stroke-linecap="round"/>
+                        <path d="M18.7 28 L29.3 28" fill="none" stroke="#34D27F" stroke-width="3.4" stroke-linecap="round"/>
                     </svg>
                 </span>
                     <span class="logo-text">AFIM <span class="logo-accent">Consulting</span></span>
