@@ -217,7 +217,7 @@ Dans **Forms → Settings → Form notifications**, ajouter votre email pour rec
 └── assets/
     └── images/
         ├── hero.jpg        Conteneurs port (hero, ~671 Ko)
-        ├── about.jpg       Consultant business (~311 Ko)
+        ├── about.jpg       Terminal à conteneurs, vue aérienne (~145 Ko)
         ├── logistics.jpg   Port logistique (~574 Ko)
         └── cta.jpg         Background CTA (~144 Ko)
 ```
