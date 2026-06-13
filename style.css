@@ -1216,8 +1216,10 @@ section { padding: 100px 0; }
 
 .why-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
+    max-width: 1040px;
+    margin: 0 auto;
 }
 
 .why-card {
@@ -1311,6 +1313,21 @@ section { padding: 100px 0; }
     gap: 14px;
     justify-content: center;
 }
+
+/* Discreet tertiary phone link under the two main CTA buttons */
+.cta-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 22px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.78);
+}
+.cta-phone i { color: var(--accent); font-size: 14px; }
+.cta-phone:hover,
+.cta-phone:focus-visible { color: #fff; }
 
 /* ===== FAQ ===== */
 .faq { background: var(--light-grey); }
