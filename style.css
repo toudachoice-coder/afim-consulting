@@ -966,7 +966,7 @@ section { padding: 100px 0; }
 
 .formality-card {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 18px;
     background: var(--light-grey);
     padding: 24px 24px;
@@ -998,6 +998,23 @@ section { padding: 100px 0; }
     overflow-wrap: break-word;
 }
 
+.formality-text {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.formality-card p {
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--text-muted);
+    margin: 0;
+    transition: var(--transition);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+.formality-card:hover p { color: rgba(255, 255, 255, 0.82); }
+
 .formality-note {
     background: linear-gradient(135deg, rgba(45, 212, 191, 0.06), rgba(7, 24, 39, 0.03));
     border-left: 4px solid var(--accent);
@@ -1019,6 +1036,46 @@ section { padding: 100px 0; }
     color: var(--text-dark);
     line-height: 1.7;
     font-size: 15px;
+}
+
+/* ===== TRUST BLOCK (qualitatif) ===== */
+.trust-block {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 36px;
+}
+
+.trust-point {
+    background: var(--light-grey);
+    border: 1px solid var(--grey-border);
+    border-radius: var(--radius-md);
+    padding: 26px 22px;
+    text-align: center;
+    transition: var(--transition);
+}
+.trust-point:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+}
+
+.trust-point i {
+    color: var(--accent);
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.trust-point h3 {
+    font-size: 15px;
+    color: var(--navy);
+    margin: 0 0 8px;
+}
+
+.trust-point p {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin: 0;
 }
 
 /* ===== SECTEURS ===== */
@@ -1877,6 +1934,7 @@ section { padding: 100px 0; }
     .secteurs-grid { grid-template-columns: repeat(3, 1fr); }
     .method-grid { grid-template-columns: repeat(2, 1fr); }
     .formalites-grid { grid-template-columns: repeat(2, 1fr); }
+    .trust-block { grid-template-columns: repeat(2, 1fr); }
     .markets-grid { grid-template-columns: repeat(2, 1fr); }
 
     .about-grid,
@@ -1962,6 +2020,11 @@ section { padding: 100px 0; }
     .secteurs-grid,
     .method-grid,
     .formalites-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .trust-block {
         grid-template-columns: 1fr;
         gap: 14px;
     }
