@@ -771,7 +771,8 @@ section { padding: 100px 0; }
     position: relative;
     border-radius: var(--radius-lg);
     overflow: hidden;
-    box-shadow: var(--shadow-lg);
+    /* Liseré net + ombre douce : bords définis et rendu cohérent sur toutes les images */
+    box-shadow: var(--shadow-lg), inset 0 0 0 1px rgba(7, 30, 61, 0.08);
     z-index: 2;
 }
 
