@@ -1,55 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>/</loc>
+        <loc>https://afimconsulting.com/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
         <lastmod>2026-05-12</lastmod>
     </url>
-    <url>
-        <loc>/#about-section</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>/#services-section</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>/#export-section</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>/#formalites-section</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>/#contact-section</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>/#faq-section</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url><loc>/services/conseil-personnalise.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-    <url><loc>/services/accompagnement-export.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-    <url><loc>/services/marches-internationaux.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-    <url><loc>/services/formalites-administratives.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-    <url><loc>/services/transport-marchandises.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-    <url><loc>/secteurs/produits-alimentaires.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-    <url><loc>/secteurs/produits-cosmetiques.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-    <url><loc>/secteurs/produits-artisanaux.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-    <url><loc>/secteurs/produits-du-terroir.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-    <url><loc>/secteurs/cooperatives.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-    <url><loc>/secteurs/pme.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-    <url><loc>/secteurs/importateurs.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-    <url><loc>/secteurs/exportateurs.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-    <url><loc>/secteurs/commercants.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-    <url><loc>/secteurs/negociants.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://afimconsulting.com/services/conseil-personnalise.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://afimconsulting.com/services/accompagnement-export.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://afimconsulting.com/services/marches-internationaux.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://afimconsulting.com/services/formalites-administratives.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://afimconsulting.com/services/transport-marchandises.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://afimconsulting.com/secteurs/produits-alimentaires.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://afimconsulting.com/secteurs/produits-cosmetiques.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://afimconsulting.com/secteurs/produits-artisanaux.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://afimconsulting.com/secteurs/produits-du-terroir.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://afimconsulting.com/secteurs/cooperatives.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://afimconsulting.com/secteurs/pme.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://afimconsulting.com/secteurs/importateurs.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://afimconsulting.com/secteurs/exportateurs.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://afimconsulting.com/secteurs/commercants.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://afimconsulting.com/secteurs/negociants.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
