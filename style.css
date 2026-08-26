@@ -2513,3 +2513,32 @@ section { padding: 100px 0; }
     .accompagnement-list,
     .gains-grid { grid-template-columns: 1fr; }
 }
+
+/* ============================================================
+   FIX HEADER — empêcher le débordement du bouton CTA
+   (écrans larges / zoom navigateur). N'altère ni couleurs,
+   ni identité visuelle : contrôle uniquement le débordement.
+   ============================================================ */
+.header-inner {
+    flex-wrap: nowrap;
+    min-width: 0;
+}
+.header-inner .main-nav {
+    min-width: 0;
+    overflow: hidden;
+}
+.header-actions {
+    flex-shrink: 0;
+}
+.btn-cta-header {
+    white-space: nowrap;
+}
+
+/* Écrans intermédiaires : réduire légèrement les espacements
+   pour que tout tienne sans jamais dépasser le cadre. */
+@media (min-width: 1101px) and (max-width: 1360px) {
+    .header-inner { gap: 12px; }
+    .main-nav .nav-list { gap: 2px; }
+    .nav-link { padding: 10px 10px; }
+    .btn-cta-header { padding: 11px 16px; }
+}
