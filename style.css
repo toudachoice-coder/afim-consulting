@@ -2525,7 +2525,6 @@ section { padding: 100px 0; }
 }
 .header-inner .main-nav {
     min-width: 0;
-    overflow: hidden;
 }
 .header-actions {
     flex-shrink: 0;
@@ -2533,12 +2532,21 @@ section { padding: 100px 0; }
 .btn-cta-header {
     white-space: nowrap;
 }
+.nav-link {
+    white-space: nowrap;
+}
 
-/* Écrans intermédiaires : réduire légèrement les espacements
-   pour que tout tienne sans jamais dépasser le cadre. */
-@media (min-width: 1101px) and (max-width: 1360px) {
-    .header-inner { gap: 12px; }
+/* Écrans intermédiaires : réduire progressivement les espacements
+   du menu pour que tout tienne sans jamais couper un lien ni
+   déborder du cadre (large / zoom navigateur). */
+@media (min-width: 1101px) and (max-width: 1500px) {
+    .header-inner { gap: 14px; }
     .main-nav .nav-list { gap: 2px; }
-    .nav-link { padding: 10px 10px; }
-    .btn-cta-header { padding: 11px 16px; }
+    .nav-link { padding: 10px 11px; font-size: 13.5px; }
+    .btn-cta-header { padding: 11px 18px; }
+}
+@media (min-width: 1101px) and (max-width: 1280px) {
+    .header-inner { gap: 10px; }
+    .nav-link { padding: 9px 8px; font-size: 13px; }
+    .btn-cta-header { padding: 10px 14px; font-size: 13px; }
 }
