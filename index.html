@@ -302,45 +302,67 @@
 
         /* ---- Responsive ---- */
         @media (max-width: 768px) {
-            /* Give the mobile hero real height and anchor the text card to the
-               bottom so the port image stays visible above it, instead of the
-               section shrinking to the card's content height. */
+            /* Mobile: the port photo is the hero's actual background — no
+               opaque white card. Give the section real height and anchor
+               the content to the bottom, over a dark scrim on the image. */
             .hero--premium.hero {
                 min-height: 100vh;
                 min-height: 100svh;
                 align-items: flex-end;
             }
+
+            /* Plain image — no light veil baked in, unlike desktop. */
+            .hero--premium .hero-bg {
+                background: url('assets/images/hero.jpg') center/cover no-repeat;
+            }
+
+            /* Dark scrim carries the readability job on mobile: almost
+               transparent at the top (image reads clearly), opaque near the
+               bottom where the text sits. */
+            .hero--premium .hero-overlay {
+                background:
+                    linear-gradient(
+                        180deg,
+                        rgba(5, 16, 33, 0) 0%,
+                        rgba(5, 16, 33, 0.05) 32%,
+                        rgba(5, 16, 33, 0.55) 60%,
+                        rgba(5, 16, 33, 0.86) 100%
+                    );
+            }
+
+            /* Remove the card chrome — content sits directly on the photo. */
             .hero--premium .hero-card {
                 max-width: 100%;
-                padding: 24px 20px;
-                background: rgba(255, 255, 255, 0.92);
+                padding: 0;
+                background: none;
+                border: none;
+                border-radius: 0;
+                box-shadow: none;
+                -webkit-backdrop-filter: none;
+                backdrop-filter: none;
             }
-            /* Keep the title compact so it doesn't break into too many lines. */
+
+            /* Light text over the photo instead of dark text on a white card. */
+            .hero--premium .hero-tag {
+                background: rgba(255, 255, 255, 0.14);
+                border-color: rgba(255, 255, 255, 0.4);
+                color: #fff;
+            }
             .hero--premium .hero-title {
+                color: #fff;
                 font-size: clamp(1.8rem, 7.4vw, 2.2rem);
                 max-width: 100%;
                 margin-bottom: 16px;
+                text-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
             }
             .hero--premium .hero-subtitle {
+                color: var(--accent-light);
                 font-size: 1.02rem;
                 margin-bottom: 20px;
             }
             .hero--premium .hero-description {
+                color: rgba(255, 255, 255, 0.9);
                 margin-bottom: 28px;
-            }
-            /* Progressive veil: nearly clear at the top so the port image reads
-               clearly, opaque only near the bottom where the text card sits. */
-            .hero--premium .hero-bg {
-                background:
-                    linear-gradient(
-                        180deg,
-                        rgba(247, 249, 252, 0.04) 0%,
-                        rgba(247, 249, 252, 0.18) 36%,
-                        rgba(234, 242, 251, 0.55) 56%,
-                        rgba(234, 242, 251, 0.88) 74%,
-                        rgba(247, 249, 252, 0.97) 100%
-                    ),
-                    url('assets/images/hero.jpg') center/cover no-repeat;
             }
             .hero--premium .hero-buttons {
                 flex-direction: column;
