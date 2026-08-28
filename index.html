@@ -302,10 +302,18 @@
 
         /* ---- Responsive ---- */
         @media (max-width: 768px) {
+            /* Give the mobile hero real height and anchor the text card to the
+               bottom so the port image stays visible above it, instead of the
+               section shrinking to the card's content height. */
+            .hero--premium.hero {
+                min-height: 100vh;
+                min-height: 100svh;
+                align-items: flex-end;
+            }
             .hero--premium .hero-card {
                 max-width: 100%;
                 padding: 24px 20px;
-                background: rgba(255, 255, 255, 0.82);
+                background: rgba(255, 255, 255, 0.92);
             }
             /* Keep the title compact so it doesn't break into too many lines. */
             .hero--premium .hero-title {
@@ -320,9 +328,18 @@
             .hero--premium .hero-description {
                 margin-bottom: 28px;
             }
+            /* Progressive veil: nearly clear at the top so the port image reads
+               clearly, opaque only near the bottom where the text card sits. */
             .hero--premium .hero-bg {
                 background:
-                    linear-gradient(180deg, rgba(247, 249, 252, 0.93) 0%, rgba(234, 242, 251, 0.80) 100%),
+                    linear-gradient(
+                        180deg,
+                        rgba(247, 249, 252, 0.04) 0%,
+                        rgba(247, 249, 252, 0.18) 36%,
+                        rgba(234, 242, 251, 0.55) 56%,
+                        rgba(234, 242, 251, 0.88) 74%,
+                        rgba(247, 249, 252, 0.97) 100%
+                    ),
                     url('assets/images/hero.jpg') center/cover no-repeat;
             }
             .hero--premium .hero-buttons {
