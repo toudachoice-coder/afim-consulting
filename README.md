@@ -1,6 +1,6 @@
 # AFIM Consulting — Site Web Officiel
 
-Site web statique **premium**, **professionnel** et **100% responsive** pour **AFIM Consulting**, cabinet de conseil et d'accompagnement en import/export, formalités administratives, commerce international et transport de marchandises, basé à Bouskoura, Maroc.
+Site web statique **premium**, **professionnel** et **100% responsive** pour **AFIM Consulting**, cabinet de conseil et d'accompagnement en import/export, formalités administratives, commerce international et transport de marchandises, basé à Quartier Bourgogne, Casablanca, Maroc.
 
 > ✅ **Prêt à déployer directement sur Netlify** — HTML, CSS, JavaScript pur, aucun backend, aucune dépendance build.
 
@@ -193,8 +193,8 @@ Dans **Forms → Settings → Form notifications**, ajouter votre email pour rec
 | Appel principal | `tel:+212666038036` |
 | Appel secondaire | `tel:+212520237817` |
 | WhatsApp | `https://wa.me/212666038036?text=...` |
-| Itinéraire Maps | `https://www.google.com/maps/dir/?api=1&destination=33.44978493111717,-7.652362301424107` |
-| Voir sur Maps | `https://www.google.com/maps?q=33.44978493111717,-7.652362301424107` |
+| Itinéraire Maps | `https://www.google.com/maps/dir/?api=1&destination=Bourgogne,+Casablanca,+Maroc` |
+| Voir sur Maps | `https://www.google.com/maps/search/?api=1&query=Bourgogne,+Casablanca,+Maroc` |
 | Soumission formulaire | `POST /` (Netlify Forms) → redirection `/merci.html` |
 
 ---
@@ -248,8 +248,7 @@ Dans **Forms → Settings → Form notifications**, ajouter votre email pour rec
 |---|---|
 | Téléphone / WhatsApp principal | **+212 666 038 036** |
 | Téléphone secondaire | **+212 520 237 817** |
-| Adresse | Bouskoura, Maroc |
-| GPS | 33.44978493111717, -7.652362301424107 |
+| Adresse | Quartier Bourgogne, Casablanca, Maroc |
 
 ---
 
