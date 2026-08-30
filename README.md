@@ -21,22 +21,17 @@ Site web statique **premium**, **professionnel** et **100% responsive** pour **A
    - Publish directory : `.`
 4. Déployer.
 
-### Activer les notifications de formulaire
-Netlify détecte automatiquement le formulaire (`data-netlify="true"`).
-Dans **Forms → Settings → Form notifications**, ajouter votre email pour recevoir chaque demande.
+### Notifications de formulaire
+Le formulaire de contact n'utilise plus Netlify Forms : les soumissions sont envoyées en JSON via `fetch()` vers un webhook n8n de production (`https://n8n.srv1431621.hstgr.cloud/webhook/afim-contact`), qui se charge du traitement et des notifications.
 
 ---
 
 ## 🆕 Améliorations apportées (version révisée)
 
-### ✅ Compatibilité Netlify Forms — renforcée
-- **Formulaire HTML statique caché** ajouté en haut du `<body>` pour garantir la détection au build par Netlify (même si le formulaire visible utilise JS).
-- Attribut `data-netlify-honeypot="bot-field"` (syntaxe officielle Netlify).
-- **Action `/merci.html`** : redirection automatique vers une page de remerciement dédiée si JS est désactivé.
-- **Soumission AJAX** via `fetch()` avec encoding `application/x-www-form-urlencoded` (format attendu par Netlify Forms).
-- Page de succès `merci.html` complète et responsive (titre, icône check animée, boutons d'appel et WhatsApp).
-- `noindex` sur la page de remerciement (SEO).
-- Champ honeypot **complètement masqué** (off-screen + `tabindex="-1"`).
+### ✅ Formulaire de contact — soumission vers webhook n8n
+- **Soumission AJAX** via `fetch()` en `POST` JSON vers le webhook n8n de production (`https://n8n.srv1431621.hstgr.cloud/webhook/afim-contact`), avec exactement les champs `name`, `phone`, `email`, `service`, `message`.
+- Message de succès affiché uniquement si la réponse HTTP est `ok`, message d'erreur sinon.
+- Champ honeypot **complètement masqué** (off-screen + `tabindex="-1"`), conservé comme protection anti-spam côté client.
 - **Validation en temps réel** sur blur/input (classe `.invalid` rouge).
 
 ### ✅ Mobile responsive — entièrement repensé
@@ -195,7 +190,7 @@ Dans **Forms → Settings → Form notifications**, ajouter votre email pour rec
 | WhatsApp | `https://wa.me/212666038036?text=...` |
 | Itinéraire Maps | `https://www.google.com/maps/dir/?api=1&destination=Bourgogne,+Casablanca,+Maroc` |
 | Voir sur Maps | `https://www.google.com/maps/search/?api=1&query=Bourgogne,+Casablanca,+Maroc` |
-| Soumission formulaire | `POST /` (Netlify Forms) → redirection `/merci.html` |
+| Soumission formulaire | `POST https://n8n.srv1431621.hstgr.cloud/webhook/afim-contact` (JSON) |
 
 ---
 

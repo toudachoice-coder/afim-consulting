@@ -209,7 +209,9 @@
         observer.observe(iframe);
     }
 
-    /* ----- Contact form (Netlify Forms + AJAX with feedback) ----- */
+    /* ----- Contact form (AJAX submission to n8n webhook) ----- */
+    const CONTACT_WEBHOOK_URL = 'https://n8n.srv1431621.hstgr.cloud/webhook/afim-contact';
+
     function initContactForm() {
         const form = document.getElementById('contact-form');
         if (!form) return;
@@ -264,13 +266,6 @@
             }
         }
 
-        // Encode FormData to application/x-www-form-urlencoded for Netlify
-        function encode(data) {
-            return Object.keys(data)
-                .map(k => encodeURIComponent(k) + '=' + encodeURIComponent(data[k]))
-                .join('&');
-        }
-
         form.addEventListener('submit', function (e) {
             e.preventDefault();
 
@@ -289,19 +284,19 @@
                 submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin" aria-hidden="true"></i> Envoi en cours...';
             }
 
-            // Build form data object (so Netlify Forms receives all named fields)
-            const data = {};
-            const formData = new FormData(form);
-            for (const [key, value] of formData.entries()) {
-                data[key] = value;
-            }
-            // Ensure form-name is set
-            data['form-name'] = 'contact';
+            // Build the JSON payload expected by the n8n webhook
+            const payload = {
+                name: (form.querySelector('[name="name"]').value || '').trim(),
+                phone: (form.querySelector('[name="phone"]').value || '').trim(),
+                email: (form.querySelector('[name="email"]').value || '').trim(),
+                service: (form.querySelector('[name="service"]').value || '').trim(),
+                message: (form.querySelector('[name="message"]').value || '').trim()
+            };
 
-            fetch('/', {
+            fetch(CONTACT_WEBHOOK_URL, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: encode(data)
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
             }).then((response) => {
                 if (response.ok) {
                     showFeedback(
