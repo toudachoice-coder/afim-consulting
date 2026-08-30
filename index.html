@@ -377,21 +377,6 @@
     <!-- Lien d'évitement pour l'accessibilité -->
     <a href="#main-content" class="skip-link">Aller au contenu principal</a>
 
-    <!-- ============================================================
-         HIDDEN STATIC FORM FOR NETLIFY DETECTION
-         (Netlify reads HTML at build time. We add a plain static form
-         here so the form is always detected even if the visible form
-         uses JS.)
-         ============================================================ -->
-    <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/merci.html" hidden>
-        <input type="text" name="name">
-        <input type="tel" name="phone">
-        <input type="email" name="email">
-        <input type="text" name="service">
-        <textarea name="message"></textarea>
-        <input name="bot-field">
-    </form>
-
     <!-- ===== HEADER ===== -->
     <header id="site-header" class="site-header" role="banner">
         <div class="container header-inner">
@@ -1104,19 +1089,15 @@
                         </div>
                     </div>
 
-                    <!-- Contact form (Netlify Forms) -->
+                    <!-- Contact form (submitted via JS to the n8n webhook) -->
                     <div class="contact-form-wrapper">
                         <h3>Envoyez-nous votre demande</h3>
                         <form
                             name="contact"
                             method="POST"
-                            action="/merci.html"
-                            data-netlify="true"
-                            data-netlify-honeypot="bot-field"
                             class="contact-form"
                             id="contact-form"
                             novalidate>
-                            <input type="hidden" name="form-name" value="contact">
                             <!-- Honeypot anti-spam (hidden from real users) -->
                             <p class="hidden-field" aria-hidden="true">
                                 <label>Ne pas remplir si vous êtes humain : <input name="bot-field" tabindex="-1" autocomplete="off"></label>
