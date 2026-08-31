@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog AFIM Consulting</title>
+    <link>https://afimconsulting.com/blog/</link>
+    <atom:link href="https://afimconsulting.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Conseils, guides et actualites import-export : douane, PortNet, formalites et logistique internationale.</description>
+    <language>fr-fr</language>
+    <copyright>AFIM Consulting</copyright>
+    <lastBuildDate>Mon, 31 Aug 2026 09:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Exporter un produit depuis le Maroc : le guide complet</title>
+      <link>https://afimconsulting.com/blog/comment-exporter-produit-depuis-maroc/</link>
+      <guid isPermaLink="true">https://afimconsulting.com/blog/comment-exporter-produit-depuis-maroc/</guid>
+      <pubDate>Mon, 31 Aug 2026 09:00:00 GMT</pubDate>
+      <category>Guides pratiques et documents</category>
+      <description>Les étapes concrètes pour exporter un produit depuis le Maroc : statut, documents, formalités douanières, transport et paiement, expliqués pas à pas.</description>
+    </item>
+    <item>
+      <title>Documents nécessaires pour exporter depuis le Maroc</title>
+      <link>https://afimconsulting.com/blog/documents-necessaires-export-maroc/</link>
+      <guid isPermaLink="true">https://afimconsulting.com/blog/documents-necessaires-export-maroc/</guid>
+      <pubDate>Mon, 31 Aug 2026 09:00:00 GMT</pubDate>
+      <category>Guides pratiques et documents</category>
+      <description>La liste des documents commerciaux, douaniers et sanitaires à préparer pour une exportation depuis le Maroc, avec les points de vigilance utiles.</description>
+    </item>
+    <item>
+      <title>PortNet Maroc : étapes et formalités pour les importateurs et exportateurs</title>
+      <link>https://afimconsulting.com/blog/portnet-maroc-formalites-import-export/</link>
+      <guid isPermaLink="true">https://afimconsulting.com/blog/portnet-maroc-formalites-import-export/</guid>
+      <pubDate>Mon, 31 Aug 2026 09:00:00 GMT</pubDate>
+      <category>Douane, PortNet et formalités</category>
+      <description>À quoi sert PortNet, qui doit s'y inscrire et comment la plateforme s'intègre aux formalités d'import et d'export au Maroc. Guide clair et pratique.</description>
+    </item>
+  </channel>
+</rss>

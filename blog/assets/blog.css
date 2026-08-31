@@ -1,0 +1,281 @@
+/* ==========================================================================
+   AFIM Consulting — Styles du blog
+   --------------------------------------------------------------------------
+   Ce fichier ne redéfinit aucune variable et n'écrase aucune règle de
+   style.css. Il est chargé APRÈS style.css et n'ajoute que les composants
+   propres au blog (grille d'articles, sommaire, notes, tableaux, FAQ
+   d'article, sources). Le header, le menu mobile, le footer, le hero
+   (.sector-hero), le CTA de bas de page (.sector-bottom-cta) et la FAQ
+   (.faq-item / .faq-question / .faq-answer) réutilisent tels quels les
+   composants déjà définis dans style.css, avec les mêmes variables :
+   --navy, --deep-blue, --accent, --accent-bg, --text-dark, --text-muted,
+   --grey-border, --light-grey, --shadow-sm, --shadow-md, --radius-sm,
+   --radius-md, --container.
+   ========================================================================== */
+
+/* ---------- Fil d'Ariane clair (pages de listing, hors hero sombre) ------- */
+.blog-crumbs {
+    background: var(--light-grey);
+    border-bottom: 1px solid var(--grey-border);
+}
+.blog-crumbs ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    list-style: none;
+    margin: 0;
+    padding: 14px 0;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+.blog-crumbs li + li::before { content: "/"; margin-right: 6px; color: var(--text-muted); }
+.blog-crumbs a { color: var(--text-dark); }
+.blog-crumbs a:hover { color: var(--accent); }
+
+/* ---------- Méta sous le H1 du hero (date, temps de lecture, catégorie) --- */
+.blog-hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    margin-top: 4px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.82);
+}
+.blog-hero-tag {
+    display: inline-block;
+    padding: 5px 14px;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 999px;
+    font-size: 12.5px;
+    color: #fff;
+    text-decoration: none;
+}
+.blog-hero-tag:hover { background: rgba(255, 255, 255, 0.24); color: #fff; }
+
+/* ---------- Outils : recherche + filtres ---------------------------------- */
+.blog-tools { display: grid; gap: 18px; margin-bottom: 30px; }
+
+.blog-search label {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 8px;
+}
+.blog-search input {
+    width: 100%;
+    max-width: 460px;
+    padding: 12px 16px;
+    font: inherit;
+    font-size: 15px;
+    color: var(--text-dark);
+    background: #fff;
+    border: 1px solid var(--grey-border);
+    border-radius: var(--radius-sm);
+}
+.blog-search input:focus-visible { outline: 3px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
+
+.blog-filters { display: flex; flex-wrap: wrap; gap: 10px; }
+.blog-filter {
+    padding: 9px 16px;
+    font: inherit;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--text-dark);
+    background: var(--light-grey);
+    border: 1px solid var(--grey-border);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.blog-filter:hover { border-color: var(--accent); color: var(--navy); }
+.blog-filter[aria-pressed="true"] {
+    background: var(--navy);
+    border-color: var(--navy);
+    color: #fff;
+    font-weight: 600;
+}
+.blog-filter[disabled] { opacity: .5; cursor: default; }
+.blog-filter[disabled]:hover { border-color: var(--grey-border); color: var(--text-dark); }
+
+.blog-status { margin: 0 0 20px; font-size: 14px; color: var(--text-muted); }
+.blog-empty {
+    padding: 30px 26px;
+    background: var(--light-grey);
+    border: 1px dashed var(--grey-border);
+    border-radius: var(--radius-md);
+    color: var(--text-dark);
+}
+.blog-empty p + p { margin-top: 10px; }
+
+/* ---------- Grille de cartes d'articles ------------------------------------ */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 24px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.blog-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 26px;
+    background: #fff;
+    border: 1px solid var(--grey-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+.blog-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: rgba(30, 78, 140, 0.3); }
+.blog-card[hidden] { display: none; }
+.blog-card__cat {
+    display: inline-block;
+    align-self: flex-start;
+    margin-bottom: 14px;
+    padding: 5px 12px;
+    background: var(--accent-bg);
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent-dark);
+}
+.blog-card__title { font-size: 1.08rem; margin-bottom: .55em; }
+.blog-card__title a { color: var(--navy); }
+.blog-card__title a:hover { color: var(--accent); }
+.blog-card__excerpt { margin: 0 0 18px; font-size: .95rem; color: var(--text-muted); line-height: 1.65; }
+.blog-card__meta { margin: auto 0 16px; font-size: .84rem; color: var(--text-muted); }
+.blog-card__link { font-size: .92rem; font-weight: 600; color: var(--accent); }
+.blog-card__link:hover { color: var(--navy); text-decoration: underline; }
+
+/* ---------- Article mis en avant ------------------------------------------- */
+.blog-featured {
+    display: grid;
+    gap: 28px;
+    padding: 32px;
+    background: #fff;
+    border: 1px solid var(--grey-border);
+    border-left: 4px solid var(--navy);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+}
+@media (min-width: 860px) { .blog-featured { grid-template-columns: 1.35fr 1fr; align-items: start; } }
+.blog-featured h3 { font-size: clamp(1.2rem, 2.6vw, 1.55rem); margin-bottom: .5em; }
+.blog-featured h3 a { color: var(--navy); }
+.blog-featured h3 a:hover { color: var(--accent); }
+.blog-featured__side { padding: 22px; background: var(--light-grey); border-radius: var(--radius-sm); }
+.blog-featured__side h4 { font-family: 'Montserrat', sans-serif; font-size: .95rem; color: var(--navy); margin-bottom: .8em; }
+.blog-featured__side ul { margin: 0; padding-left: 20px; font-size: .92rem; color: var(--text-dark); list-style: disc; }
+.blog-featured__side li + li { margin-top: 8px; }
+
+/* ---------- Petite variante des cartes "thématiques" (réutilise enjeu-card) */
+.enjeu-card--topic h3 a { color: var(--navy); }
+.enjeu-card--topic h3 a:hover { color: var(--accent); }
+.enjeu-card--topic small { color: var(--text-muted); font-size: .84rem; }
+
+/* ---------- Mise en page article : contenu + colonne latérale ------------- */
+.blog-layout { display: grid; gap: 44px; padding: 56px 0; }
+@media (min-width: 1000px) { .blog-layout { grid-template-columns: minmax(0, 1fr) 300px; } }
+
+.blog-prose { max-width: 720px; }
+.blog-prose > * + * { margin-top: 1.15em; }
+.blog-prose h2 {
+    margin-top: 2.1em;
+    padding-top: .65em;
+    border-top: 1px solid var(--grey-border);
+    font-size: 1.5rem;
+    scroll-margin-top: 100px;
+}
+.blog-prose h3 { margin-top: 1.7em; font-size: 1.15rem; }
+.blog-prose p { margin-bottom: 0; color: var(--text-dark); line-height: 1.8; }
+.blog-prose ul, .blog-prose ol { padding-left: 24px; color: var(--text-dark); line-height: 1.8; }
+.blog-prose li + li { margin-top: 8px; }
+.blog-prose strong { color: var(--navy); }
+.blog-prose a { color: var(--accent); text-decoration: underline; text-decoration-color: rgba(30,78,140,.35); }
+.blog-prose a:hover { color: var(--navy); }
+
+.blog-lead { font-size: 1.12rem; color: var(--navy); line-height: 1.75; }
+
+.blog-note {
+    padding: 20px 22px;
+    background: var(--light-grey);
+    border-left: 3px solid var(--accent-dark);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    font-size: .95rem;
+    color: var(--text-dark);
+}
+.blog-note strong { display: block; margin-bottom: 6px; color: var(--navy); font-family: 'Montserrat', sans-serif; }
+
+.blog-tablewrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.blog-table { width: 100%; min-width: 480px; border-collapse: collapse; font-size: .92rem; }
+.blog-table th, .blog-table td { padding: 12px 14px; border: 1px solid var(--grey-border); text-align: left; vertical-align: top; }
+.blog-table th { background: var(--light-grey); color: var(--navy); font-family: 'Montserrat', sans-serif; font-weight: 600; }
+
+/* Sommaire (table des matières) */
+.blog-toc {
+    padding: 22px 24px;
+    background: var(--light-grey);
+    border: 1px solid var(--grey-border);
+    border-radius: var(--radius-md);
+}
+.blog-toc h2 { margin: 0 0 14px; padding: 0; border: 0; font-size: 1rem; }
+.blog-toc ol { margin: 0; padding-left: 20px; font-size: .94rem; color: var(--text-dark); }
+.blog-toc li + li { margin-top: 7px; }
+.blog-toc a { color: var(--accent); }
+.blog-toc a:hover { color: var(--navy); }
+
+/* Barre latérale */
+.blog-aside { display: grid; gap: 22px; align-content: start; }
+@media (min-width: 1000px) { .blog-aside { position: sticky; top: 100px; } }
+.blog-widget {
+    padding: 22px;
+    background: #fff;
+    border: 1px solid var(--grey-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+.blog-widget h2 { font-family: 'Montserrat', sans-serif; font-size: 1rem; color: var(--navy); margin-bottom: .8em; }
+.blog-widget ul { margin: 0; padding-left: 18px; font-size: .92rem; }
+.blog-widget li + li { margin-top: 9px; }
+.blog-widget a { color: var(--accent); }
+.blog-widget a:hover { color: var(--navy); }
+
+/* Sources officielles */
+.blog-sources {
+    padding: 24px;
+    background: var(--light-grey);
+    border: 1px solid var(--grey-border);
+    border-radius: var(--radius-md);
+}
+.blog-sources h2 { margin-top: 0; padding-top: 0; border-top: 0; font-size: 1.15rem; }
+.blog-sources ul { margin: 0; padding-left: 20px; font-size: .94rem; }
+.blog-sources li + li { margin-top: 9px; }
+.blog-sources a { color: var(--accent); }
+.blog-sources a:hover { color: var(--navy); }
+.blog-sources__checked { margin: 18px 0 0; font-size: .86rem; color: var(--text-muted); }
+
+/* CTA discret au fil de l'article */
+.blog-cta-inline {
+    margin-top: 2em;
+    padding: 24px 26px;
+    background: var(--accent-bg);
+    border: 1px solid rgba(30, 78, 140, 0.18);
+    border-radius: var(--radius-md);
+    color: var(--text-dark);
+}
+.blog-cta-inline p { margin: 0 0 16px; font-size: .97rem; }
+.blog-cta-inline h2 { margin-top: 0 !important; padding-top: 0 !important; border-top: 0 !important; }
+
+/* ---------- Responsive ----------------------------------------------------- */
+@media (max-width: 720px) {
+    .blog-layout { padding: 40px 0; gap: 34px; }
+    .blog-grid { grid-template-columns: 1fr; }
+}
+
+@media print {
+    .site-header, .floating-whatsapp, .back-to-top, .sector-bottom-cta, .blog-tools, .blog-aside { display: none !important; }
+    .blog-prose { max-width: none; }
+}
