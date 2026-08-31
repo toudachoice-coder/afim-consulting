@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<!--
+  GABARIT D'ARTICLE — NE PAS PUBLIER TEL QUEL
+  ============================================
+  Ce fichier n'est jamais publié directement. Il porte une balise noindex,
+  n'est référencé ni dans le sitemap.xml ni dans blog/feed.xml, et ne doit
+  jamais être copié dans /blog/ sans être entièrement rempli.
+
+  Mode d'emploi : voir BLOG-PUBLICATION-GUIDE.md à la racine du dépôt.
+
+  1. Copiez ce fichier vers /blog/<slug>/index.html
+  2. Remplacez tous les jetons {{ENTRE_DOUBLES_ACCOLADES}} par le contenu réel
+  3. Supprimez la balise <meta name="robots" content="noindex, nofollow">
+     et remplacez-la par <meta name="robots" content="index, follow, max-image-preview:large">
+  4. Supprimez ce bloc de commentaire
+  5. Suivez la checklist de BLOG-PUBLICATION-GUIDE.md avant de publier
+-->
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#071E3D">
+    <meta name="format-detection" content="telephone=yes">
+
+    <title>{{TITLE_50_60_CHARS}}</title>
+    <meta name="description" content="{{META_DESCRIPTION_140_160_CHARS}}">
+    <meta name="author" content="AFIM Consulting">
+    <!-- Gabarit non publié : ne jamais indexer tant que le contenu n'est pas réel. -->
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="language" content="French">
+    <meta name="geo.region" content="MA">
+    <meta name="geo.placename" content="Quartier Bourgogne, Casablanca, Maroc">
+    <link rel="canonical" href="https://afimconsulting.com/blog/{{SLUG}}/">
+
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="AFIM Consulting">
+    <meta property="og:title" content="{{TITLE_50_60_CHARS}}">
+    <meta property="og:description" content="{{META_DESCRIPTION_140_160_CHARS}}">
+    <meta property="og:image" content="https://afimconsulting.com/assets/images/hero.jpg">
+    <meta property="og:url" content="https://afimconsulting.com/blog/{{SLUG}}/">
+    <meta property="article:published_time" content="{{YYYY-MM-DD}}">
+    <meta property="article:modified_time" content="{{YYYY-MM-DD}}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{TITLE_50_60_CHARS}}">
+    <meta name="twitter:description" content="{{META_DESCRIPTION_140_160_CHARS}}">
+    <meta name="twitter:image" content="https://afimconsulting.com/assets/images/hero.jpg">
+
+    <link rel="alternate" type="application/rss+xml" title="Blog AFIM Consulting" href="https://afimconsulting.com/blog/feed.xml">
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='15' fill='%23071E3D'/%3E%3Ctext x='50' y='68' font-family='Montserrat,Arial' font-size='52' font-weight='800' text-anchor='middle' fill='%23FFFFFF'%3EA%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23071E3D'/%3E%3Ctext x='50' y='68' font-family='Montserrat,Arial' font-size='52' font-weight='800' text-anchor='middle' fill='%23FFFFFF'%3EA%3C/text%3E%3C/svg%3E">
+    <link rel="manifest" href="../../manifest.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="../../style.css?v=teal-fix-1">
+    <link rel="stylesheet" href="../assets/blog.css">
+
+    <!-- BlogPosting : headline doit être identique au <h1> réel de la page. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "{{H1_EXACT}}",
+      "description": "{{META_DESCRIPTION_140_160_CHARS}}",
+      "inLanguage": "fr-FR",
+      "datePublished": "{{YYYY-MM-DD}}",
+      "dateModified": "{{YYYY-MM-DD}}",
+      "author": { "@type": "Organization", "name": "AFIM Consulting", "url": "https://afimconsulting.com/" },
+      "publisher": { "@type": "Organization", "name": "AFIM Consulting", "url": "https://afimconsulting.com/" },
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://afimconsulting.com/blog/{{SLUG}}/" },
+      "articleSection": "{{CATEGORIE_LABEL}}",
+      "isAccessibleForFree": true
+    }
+    </script>
+
+    <!--
+      FAQPage : à copier UNIQUEMENT si une FAQ complète est réellement visible
+      plus bas dans la page (section #faq avec .faq-list). Ne jamais laisser
+      ce bloc si la FAQ visible a été supprimée ou modifiée : les deux doivent
+      rester strictement identiques.
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "{{QUESTION_1}}",
+          "acceptedAnswer": { "@type": "Answer", "text": "{{REPONSE_1_TEXTE_SIMPLE}}" }
+        }
+      ]
+    }
+    </script>
+    -->
+
+    <!-- BreadcrumbList : adapter la position 3 à la catégorie réelle de l'article. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://afimconsulting.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://afimconsulting.com/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "{{CATEGORIE_LABEL}}", "item": "https://afimconsulting.com/blog/{{CATEGORIE_SLUG}}/" },
+        { "@type": "ListItem", "position": 4, "name": "{{H1_EXACT}}", "item": "https://afimconsulting.com/blog/{{SLUG}}/" }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <!-- ===== HEADER (identique sur toutes les pages du blog — ne pas modifier) ===== -->
+    <header id="site-header" class="site-header" role="banner">
+        <div class="container header-inner">
+            <a href="../../index.html" class="logo" aria-label="AFIM Consulting - Accueil">
+                <span class="logo-mark" aria-hidden="true">
+                    <svg class="logo-mark-svg" viewBox="0 0 48 48" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="afimMarkBg" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0" stop-color="#071E3D"/>
+                                <stop offset="1" stop-color="#0B5CAD"/>
+                            </linearGradient>
+                        </defs>
+                        <rect x="1" y="1" width="46" height="46" rx="13" fill="url(#afimMarkBg)"/>
+                        <rect x="1.75" y="1.75" width="44.5" height="44.5" rx="12.25" fill="none" stroke="#9CC4E4" stroke-opacity="0.16"/>
+                        <path d="M16 36 L24 11.5 L32 36" fill="none" stroke="#FFFFFF" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M18.7 28 L29.3 28" fill="none" stroke="#1BA6C9" stroke-width="3.4" stroke-linecap="round"/>
+                    </svg>
+                </span>
+                <span class="logo-text">AFIM <span class="logo-accent">Consulting</span></span>
+            </a>
+
+            <nav class="main-nav" aria-label="Navigation principale">
+                <ul class="nav-list">
+                    <li><a href="../../index.html#hero-section" class="nav-link">Accueil</a></li>
+                    <li><a href="../../index.html#about-section" class="nav-link">À propos</a></li>
+                    <li><a href="../../index.html#services-section" class="nav-link">Services</a></li>
+                    <li><a href="../../index.html#export-section" class="nav-link">Commerce International</a></li>
+                    <li><a href="../../index.html#formalites-section" class="nav-link">Formalités</a></li>
+                    <li><a href="../../index.html#secteurs-section" class="nav-link">Secteurs</a></li>
+                    <li><a href="../../blog/" class="nav-link active">Blog</a></li>
+                    <li><a href="../../index.html#contact-section" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="../../index.html#contact-section" class="btn btn-primary btn-cta-header">Demander une consultation</a>
+                <a href="https://wa.me/212763738280?text=Bonjour%20AFIM%20Consulting%2C%20je%20souhaite%20avoir%20des%20informations%20concernant%20vos%20services%20d%E2%80%99accompagnement%20import%2Fexport." class="mobile-whatsapp" aria-label="Contacter AFIM Consulting sur WhatsApp" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                </a>
+                <button id="hamburger" class="hamburger" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <nav id="mobile-menu" class="mobile-menu" aria-label="Menu mobile" aria-hidden="true">
+            <ul>
+                <li><a href="../../index.html#hero-section" class="mobile-link">Accueil</a></li>
+                <li><a href="../../index.html#about-section" class="mobile-link">À propos</a></li>
+                <li><a href="../../index.html#services-section" class="mobile-link">Services</a></li>
+                <li><a href="../../index.html#export-section" class="mobile-link">Commerce International</a></li>
+                <li><a href="../../index.html#formalites-section" class="mobile-link">Formalités</a></li>
+                <li><a href="../../index.html#secteurs-section" class="mobile-link">Secteurs</a></li>
+                <li><a href="../../blog/" class="mobile-link">Blog</a></li>
+                <li><a href="../../index.html#contact-section" class="mobile-link">Contact</a></li>
+                <li class="mobile-actions">
+                    <a href="../../index.html#contact-section" class="btn btn-primary mobile-cta">Demander une consultation</a>
+                    <a href="https://wa.me/212763738280?text=Bonjour%20AFIM%20Consulting%2C%20je%20souhaite%20avoir%20des%20informations%20concernant%20vos%20services%20d%E2%80%99accompagnement%20import%2Fexport." class="btn btn-whatsapp mobile-cta" target="_blank" rel="noopener noreferrer">
+                       <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div id="menu-backdrop" class="menu-backdrop" aria-hidden="true"></div>
+    </header>
+
+    <main id="main-content">
+
+        <!-- ===== HERO : un seul <h1>, il doit être identique à headline dans le JSON-LD ===== -->
+        <section class="sector-hero" aria-labelledby="article-title">
+            <div class="container">
+                <div class="sector-hero-inner">
+                    <nav class="sector-breadcrumb" aria-label="Fil d'Ariane">
+                        <a href="../../index.html#hero-section">Accueil</a>
+                        <span class="sep" aria-hidden="true">/</span>
+                        <a href="../">Blog</a>
+                        <span class="sep" aria-hidden="true">/</span>
+                        <a href="../{{CATEGORIE_SLUG}}/">{{CATEGORIE_LABEL}}</a>
+                        <span class="sep" aria-hidden="true">/</span>
+                        <span class="current">{{TITRE_COURT_FIL_ARIANE}}</span>
+                    </nav>
+                    <h1 id="article-title">{{H1_EXACT}}</h1>
+                    <div class="blog-hero-meta">
+                        <a class="blog-hero-tag" href="../{{CATEGORIE_SLUG}}/">{{CATEGORIE_LABEL}}</a>
+                        <span>Publié le <time datetime="{{YYYY-MM-DD}}">{{DATE_LISIBLE}}</time></span>
+                        <span>Dernière mise à jour le <time datetime="{{YYYY-MM-DD}}">{{DATE_LISIBLE}}</time></span>
+                        <span>{{N}} min de lecture</span>
+                        <span>Par AFIM Consulting</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container blog-layout">
+            <article class="blog-prose">
+
+                <!-- Sommaire : un lien d'ancre par H2 -->
+                <nav class="blog-toc" aria-labelledby="toc-titre">
+                    <h2 id="toc-titre">Sommaire</h2>
+                    <ol>
+                        <li><a href="#section-1">{{TITRE_H2_1}}</a></li>
+                        <li><a href="#faq">Questions fréquentes</a></li>
+                    </ol>
+                </nav>
+
+                <!-- Introduction : répond directement à la question principale du lecteur -->
+                <p class="blog-lead">{{INTRODUCTION_DIRECTE}}</p>
+
+                <h2 id="section-1">{{TITRE_H2_1}}</h2>
+                <p>{{CONTENU}}</p>
+
+                <!-- Callout pour un point de vigilance ou une clarification importante -->
+                <div class="blog-note">
+                    <strong>{{TITRE_NOTE}}</strong>
+                    {{TEXTE_NOTE}}
+                </div>
+
+                <!-- CTA discret au milieu d'un article long (facultatif) -->
+                <div class="blog-cta-inline">
+                    <p>{{PHRASE_CTA_INTERMEDIAIRE}}</p>
+                    <a class="btn btn-primary" href="https://afimconsulting.com/#contact-section">Demander une consultation</a>
+                </div>
+
+                <!-- Checklist pratique (si pertinente) -->
+                <h2 id="checklist">Checklist pratique</h2>
+                <ul>
+                    <li>{{ELEMENT_1}}</li>
+                </ul>
+
+                <!-- FAQ visible : uniquement si le JSON-LD FAQPage est activé ci-dessus -->
+                <h2 id="faq">Questions fréquentes</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>{{QUESTION_1}}</span>
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>{{REPONSE_1}}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sources officielles : obligatoire dès qu'une réglementation, une norme ou
+                     une procédure administrative est mentionnée. Lien vers la page précise,
+                     jamais vers la seule page d'accueil de l'organisme. rel="noopener noreferrer"
+                     uniquement, sans nofollow. -->
+                <section class="blog-sources" aria-labelledby="sources-titre">
+                    <h2 id="sources-titre">Sources officielles</h2>
+                    <ul>
+                        <li><a href="{{URL_SOURCE_1}}" target="_blank" rel="noopener noreferrer">{{NOM_ORGANISME}} — {{INTITULE_PAGE}}</a></li>
+                    </ul>
+                    <p class="blog-sources__checked">Informations vérifiées le&nbsp;: <time datetime="{{YYYY-MM-DD}}">{{DATE_LISIBLE}}</time>. Les textes et procédures peuvent évoluer après cette date : en cas de doute, consultez directement les pages officielles ci-dessus ou faites-vous accompagner.</p>
+                </section>
+
+                <!-- CTA final -->
+                <section class="blog-cta-inline" aria-labelledby="cta-final">
+                    <h2 id="cta-final" style="font-size:1.15rem;">Besoin d'un accompagnement sur votre dossier&nbsp;?</h2>
+                    <p>Votre projet d'importation ou d'exportation nécessite un accompagnement personnalisé&nbsp;? Contactez AFIM Consulting. Nous étudions votre produit, votre marché cible et les démarches réellement applicables à votre situation.</p>
+                    <p>
+                        <a class="btn btn-primary" href="https://afimconsulting.com/#contact-section">Demander une consultation</a>
+                        <a class="btn btn-outline" href="tel:+212763738280">Appeler +212 763 738 280</a>
+                        <a class="btn btn-outline" href="https://wa.me/212763738280?text=Bonjour%20AFIM%20Consulting%2C%20je%20souhaite%20avoir%20des%20informations%20concernant%20vos%20services%20d%E2%80%99accompagnement%20import%2Fexport." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                    </p>
+                </section>
+
+            </article>
+
+            <aside class="blog-aside" aria-label="Ressources complémentaires">
+                <!-- Au moins 2 liens entrants pertinents doivent pointer VERS ce nouvel
+                     article depuis d'autres pages (services, secteurs, autres articles) —
+                     ce widget ne compte pas comme lien entrant, seulement comme lien sortant. -->
+                <section class="blog-widget">
+                    <h2>À lire aussi</h2>
+                    <ul>
+                        <li><a href="../{{AUTRE_SLUG_1}}/">{{AUTRE_TITRE_1}}</a></li>
+                    </ul>
+                </section>
+
+                <section class="blog-widget">
+                    <h2>Services AFIM Consulting</h2>
+                    <ul>
+                        <li><a href="../../services/{{SERVICE_PERTINENT}}.html">{{NOM_SERVICE}}</a></li>
+                    </ul>
+                </section>
+
+                <section class="blog-widget">
+                    <h2>Nous contacter</h2>
+                    <ul>
+                        <li><a href="tel:+212763738280">+212 763 738 280</a></li>
+                        <li><a href="mailto:afim.consulting.contact@gmail.com">afim.consulting.contact@gmail.com</a></li>
+                        <li><a href="https://wa.me/212763738280?text=Bonjour%20AFIM%20Consulting%2C%20je%20souhaite%20avoir%20des%20informations%20concernant%20vos%20services%20d%E2%80%99accompagnement%20import%2Fexport." target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                        <li><a href="https://afimconsulting.com/#contact-section">Formulaire de contact</a></li>
+                        <li><a href="https://www.google.com/maps/dir/?api=1&destination=Bourgogne,+Casablanca,+Maroc" target="_blank" rel="noopener noreferrer">Quartier Bourgogne, Casablanca</a></li>
+                    </ul>
+                </section>
+            </aside>
+        </div>
+
+    </main>
+
+    <!-- ===== FOOTER (identique sur toutes les pages du blog — ne pas modifier) ===== -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container footer-grid">
+            <div class="footer-col footer-brand">
+                <a href="../../index.html" class="logo footer-logo" aria-label="AFIM Consulting - Accueil">
+                    <span class="logo-mark" aria-hidden="true">
+                    <svg class="logo-mark-svg" viewBox="0 0 48 48" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="afimMarkBgFooter" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0" stop-color="#071E3D"/>
+                                <stop offset="1" stop-color="#0B5CAD"/>
+                            </linearGradient>
+                        </defs>
+                        <rect x="1" y="1" width="46" height="46" rx="13" fill="url(#afimMarkBgFooter)"/>
+                        <rect x="1.75" y="1.75" width="44.5" height="44.5" rx="12.25" fill="none" stroke="#9CC4E4" stroke-opacity="0.16"/>
+                        <path d="M16 36 L24 11.5 L32 36" fill="none" stroke="#FFFFFF" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M18.7 28 L29.3 28" fill="none" stroke="#1BA6C9" stroke-width="3.4" stroke-linecap="round"/>
+                    </svg>
+                </span>
+                    <span class="logo-text">AFIM <span class="logo-accent">Consulting</span></span>
+                </a>
+                <p>Conseil, assistance et accompagnement pour l'import, l'export, le négoce, les formalités administratives et le transport de marchandises.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="../../index.html#hero-section">Accueil</a></li>
+                    <li><a href="../../index.html#about-section">À propos</a></li>
+                    <li><a href="../../index.html#services-section">Services</a></li>
+                    <li><a href="../../blog/">Blog</a></li>
+                    <li><a href="../../index.html#contact-section">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="../../services/conseil-personnalise.html">Conseil personnalisé</a></li>
+                    <li><a href="../../services/accompagnement-export.html">Accompagnement export</a></li>
+                    <li><a href="../../services/marches-internationaux.html">Marchés internationaux</a></li>
+                    <li><a href="../../services/formalites-administratives.html">Formalités administratives</a></li>
+                    <li><a href="../../services/transport-marchandises.html">Transport de marchandises</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul class="footer-contact">
+                    <li><a href="tel:+212763738280"><i class="fas fa-phone" aria-hidden="true"></i> +212 763 738 280</a></li>
+                    <li><a href="mailto:afim.consulting.contact@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i> afim.consulting.contact@gmail.com</a></li>
+                    <li><a href="https://wa.me/212763738280?text=Bonjour%20AFIM%20Consulting%2C%20je%20souhaite%20avoir%20des%20informations%20concernant%20vos%20services%20d%E2%80%99accompagnement%20import%2Fexport." target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</a></li>
+                    <li><a href="https://www.google.com/maps/dir/?api=1&destination=Bourgogne,+Casablanca,+Maroc" target="_blank" rel="noopener noreferrer"><i class="fas fa-location-dot" aria-hidden="true"></i> Quartier Bourgogne, Casablanca, Maroc</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 AFIM Consulting. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/212763738280?text=Bonjour%20AFIM%20Consulting%2C%20je%20souhaite%20avoir%20des%20informations%20concernant%20vos%20services%20d%E2%80%99accompagnement%20import%2Fexport." class="floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contacter AFIM Consulting sur WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+        <span class="floating-tooltip">Chat WhatsApp</span>
+    </a>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Retour en haut de la page">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <script src="../../script.js" defer></script>
+</body>
+</html>

@@ -4,8 +4,18 @@
         <loc>https://afimconsulting.com/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
-        <lastmod>2026-05-12</lastmod>
+        <lastmod>2026-08-31</lastmod>
     </url>
+    <url><loc>https://afimconsulting.com/blog/</loc><changefreq>weekly</changefreq><priority>0.9</priority><lastmod>2026-08-31</lastmod></url>
+    <url><loc>https://afimconsulting.com/blog/guides-pratiques/</loc><changefreq>weekly</changefreq><priority>0.7</priority><lastmod>2026-08-31</lastmod></url>
+    <url><loc>https://afimconsulting.com/blog/douane-portnet-formalites/</loc><changefreq>weekly</changefreq><priority>0.7</priority><lastmod>2026-08-31</lastmod></url>
+    <url><loc>https://afimconsulting.com/blog/actualites-import-export/</loc><changefreq>weekly</changefreq><priority>0.7</priority><lastmod>2026-08-31</lastmod></url>
+    <url><loc>https://afimconsulting.com/blog/reglementation-normes/</loc><changefreq>weekly</changefreq><priority>0.7</priority><lastmod>2026-08-31</lastmod></url>
+    <url><loc>https://afimconsulting.com/blog/comment-exporter-produit-depuis-maroc/</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-08-31</lastmod></url>
+    <url><loc>https://afimconsulting.com/blog/documents-necessaires-export-maroc/</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-08-31</lastmod></url>
+    <url><loc>https://afimconsulting.com/blog/portnet-maroc-formalites-import-export/</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-08-31</lastmod></url>
+    <url><loc>https://afimconsulting.com/blog/igoc-2026-exportateurs-maroc/</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-08-31</lastmod></url>
+    <url><loc>https://afimconsulting.com/blog/cbam-exportateurs-marocains-europe/</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-08-31</lastmod></url>
     <url><loc>https://afimconsulting.com/services/conseil-personnalise.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
     <url><loc>https://afimconsulting.com/services/accompagnement-export.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
     <url><loc>https://afimconsulting.com/services/marches-internationaux.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>

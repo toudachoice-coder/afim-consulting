@@ -2550,3 +2550,61 @@ section { padding: 100px 0; }
     .nav-link { padding: 9px 8px; font-size: 13px; }
     .btn-cta-header { padding: 10px 14px; font-size: 13px; }
 }
+
+/* ============================================================
+   BLOG PREVIEW — section "Nos derniers articles" (page d'accueil)
+   ============================================================ */
+.blog-preview { background: var(--light-grey); }
+
+.blog-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+    margin-bottom: 40px;
+}
+
+.blog-preview-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #fff;
+    padding: 30px 26px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: 1px solid var(--grey-border);
+}
+.blog-preview-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
+    border-color: rgba(30, 78, 140, 0.35);
+}
+
+.blog-preview-cat {
+    display: inline-block;
+    align-self: flex-start;
+    margin-bottom: 16px;
+    padding: 5px 13px;
+    background: var(--accent-bg);
+    color: var(--accent-dark);
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.blog-preview-card h3 { font-size: 1.08rem; margin-bottom: 12px; line-height: 1.35; }
+.blog-preview-card h3 a { color: var(--navy); }
+.blog-preview-card h3 a:hover { color: var(--accent); }
+
+.blog-preview-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.65; margin-bottom: 18px; }
+
+.blog-preview-meta { margin: auto 0 16px; font-size: 0.83rem; color: var(--text-muted); }
+
+.blog-preview-link { font-family: 'Montserrat', sans-serif; font-size: 0.9rem; font-weight: 600; color: var(--accent); display: inline-flex; align-items: center; gap: 8px; }
+.blog-preview-link:hover { color: var(--navy); }
+
+.blog-preview-footer { text-align: center; }
+
+@media (max-width: 900px) {
+    .blog-preview-grid { grid-template-columns: 1fr; }
+}
