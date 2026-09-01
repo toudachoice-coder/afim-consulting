@@ -53,6 +53,25 @@
 }
 .blog-hero-tag:hover { background: rgba(255, 255, 255, 0.24); color: #fff; }
 
+/* ---------- Image de couverture d'article ---------------------------------- */
+.blog-cover {
+    margin: 0 0 28px;
+}
+.blog-cover img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+}
+.blog-cover figcaption {
+    margin-top: 8px;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
 /* ---------- Outils : recherche + filtres ---------------------------------- */
 .blog-tools { display: grid; gap: 18px; margin-bottom: 30px; }
 
