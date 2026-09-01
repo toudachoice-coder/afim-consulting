@@ -295,24 +295,29 @@
 }
 
 /* ---------- Grilles "Actualités/réglementation" et "Thématiques" ----------
-   Sécurité anti-débordement : même à 2 colonnes, une carte ne peut jamais
-   forcer la grille à dépasser la largeur du viewport (minmax(0, 1fr) au
-   lieu de 1fr). Sous 767px, une seule carte par ligne, quelle que soit la
-   largeur exacte de l'écran (téléphones : 320 à 390px et au-delà). ---------- */
-section[aria-labelledby="actu-reglement-titre"] .enjeux-grid {
+   Conteneurs exacts : #actu-reglement-grid (2 cartes) et #cats-grid
+   (8 cartes), tous deux <div class="enjeux-grid">. Sélecteurs par id pour
+   une spécificité sans ambiguïté et pour prévaloir sur tout style hérité.
+   Desktop/tablette : comportement de style.css inchangé (repeat(3,1fr)
+   puis repeat(2,1fr) à 900px pour #cats-grid ; repeat(2,1fr) pour
+   #actu-reglement-grid, comme avant). Sous 767px : 1 carte par ligne. ---- */
+#actu-reglement-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 @media (max-width: 767px) {
-    section[aria-labelledby="actu-reglement-titre"] .enjeux-grid,
-    section[aria-labelledby="cats-titre"] .enjeux-grid {
-        grid-template-columns: 1fr;
+    #actu-reglement-grid,
+    #cats-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+        width: 100%;
+        max-width: 100%;
         gap: 18px;
     }
-    section[aria-labelledby="actu-reglement-titre"] .enjeu-card,
-    section[aria-labelledby="cats-titre"] .enjeu-card {
+    #actu-reglement-grid > *,
+    #cats-grid > * {
         width: 100%;
         min-width: 0;
+        max-width: 100%;
         box-sizing: border-box;
     }
 }
