@@ -294,6 +294,46 @@
     .blog-grid { grid-template-columns: 1fr; }
 }
 
+/* ---------- Grilles "Actualités/réglementation" et "Thématiques" ----------
+   Conteneurs exacts : #actu-reglement-grid (2 cartes) et #cats-grid
+   (8 cartes), tous deux <div class="enjeux-grid">. Sélecteurs par id pour
+   une spécificité sans ambiguïté et pour prévaloir sur tout style hérité.
+   Desktop/tablette : comportement de style.css inchangé (repeat(3,1fr)
+   puis repeat(2,1fr) à 900px pour #cats-grid ; repeat(2,1fr) pour
+   #actu-reglement-grid, comme avant). Sous 767px : 1 carte par ligne. ---- */
+#actu-reglement-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 767px) {
+    #actu-reglement-grid,
+    #cats-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+        width: 100%;
+        max-width: 100%;
+        gap: 18px;
+    }
+    #actu-reglement-grid > *,
+    #cats-grid > * {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* ---------- Titres de section : jamais masqués sous le header fixe -------- */
+#featured-titre,
+#actu-reglement-titre,
+#articles-titre,
+#cats-titre,
+#actu-titre,
+#contact-titre,
+#cat-title,
+#article-title {
+    scroll-margin-top: calc(var(--header-h-mobile) + 16px);
+}
+
 @media print {
     .site-header, .floating-whatsapp, .back-to-top, .sector-bottom-cta, .blog-tools, .blog-aside { display: none !important; }
     .blog-prose { max-width: none; }
