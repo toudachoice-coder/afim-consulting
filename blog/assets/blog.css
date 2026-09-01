@@ -13,6 +13,40 @@
    --radius-md, --container.
    ========================================================================== */
 
+/* ---------- Titres de section — bleu marine + accent doré ----------------
+   Recolore uniquement les grands titres de section déjà sur fond clair
+   (.section-title : "Article mis en avant", "Tous les articles", "Les
+   thématiques du blog", etc. sur /blog/ et les pages de catégorie ; les H2
+   d'articles dans .blog-prose). Ne touche ni au H1 du hero sombre
+   (.sector-hero h1, blanc sur fond bleu marine — le recolorer casserait le
+   contraste), ni au H2 du bandeau CTA de fin de page (.sector-bottom-cta
+   h2, même raison), ni aux cartes, boutons, header ou footer, qui gardent
+   leurs styles définis dans style.css. Couleurs volontairement distinctes
+   des variables --navy/--gold du site (réservées au reste du site) pour
+   rester strictement scopées au blog via ce fichier. --------------------- */
+.section-title,
+.blog-prose h2 {
+    color: #0A1F44;
+}
+
+/* Ligne décorative dorée déjà présente sous .section-title (l'élément
+   .section-divider) : recolorée en doré uni, toujours sur fond clair. */
+.sector-block-head .section-divider {
+    background: #C9A24A;
+}
+
+/* Les H2 d'article n'ont pas d'élément séparateur dédié : petit accent
+   doré ajouté en CSS pur, sans balisage supplémentaire. */
+.blog-prose h2::after {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 3px;
+    margin-top: 10px;
+    border-radius: 2px;
+    background: #C9A24A;
+}
+
 /* ---------- Fil d'Ariane clair (pages de listing, hors hero sombre) ------- */
 .blog-crumbs {
     background: var(--light-grey);
