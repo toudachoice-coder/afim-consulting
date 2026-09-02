@@ -196,14 +196,43 @@
         elements.forEach(el => observer.observe(el));
     }
 
-    /* ----- Lazy load map iframe to improve performance ----- */
+    /* ----- Lazy load map iframe + professional fallback -----
+       The iframe uses loading="lazy" so the browser only starts
+       fetching it once it nears the viewport. We watch for that same
+       moment to start a "did it actually load?" timer — if the load
+       never completes (network blocked, ad/privacy blocker, offline...)
+       we swap in a clean fallback block with the address and a
+       "Voir sur Google Maps" button instead of leaving a blank iframe. */
     function initLazyMap() {
-        const iframe = document.querySelector('.map-wrapper iframe');
-        if (!iframe || !('IntersectionObserver' in window)) return;
-        // Already has loading="lazy", but ensure it's only loaded near viewport
+        const iframe = document.getElementById('map-iframe');
+        const fallback = document.getElementById('map-fallback');
+        if (!iframe) return;
+
+        let loaded = false;
+        const showFallback = () => {
+            if (loaded) return;
+            iframe.style.display = 'none';
+            if (fallback) fallback.hidden = false;
+        };
+
+        iframe.addEventListener('load', () => { loaded = true; }, { once: true });
+        iframe.addEventListener('error', showFallback, { once: true });
+
+        const startFailureTimer = () => {
+            setTimeout(() => { if (!loaded) showFallback(); }, 6000);
+        };
+
+        if (!('IntersectionObserver' in window)) {
+            startFailureTimer();
+            return;
+        }
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) observer.unobserve(entry.target);
+                if (entry.isIntersecting) {
+                    observer.unobserve(entry.target);
+                    startFailureTimer();
+                }
             });
         }, { rootMargin: '200px' });
         observer.observe(iframe);
