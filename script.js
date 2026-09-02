@@ -196,13 +196,15 @@
         elements.forEach(el => observer.observe(el));
     }
 
-    /* ----- Lazy load map iframe + professional fallback -----
-       The iframe uses loading="lazy" so the browser only starts
-       fetching it once it nears the viewport. We watch for that same
-       moment to start a "did it actually load?" timer — if the load
-       never completes (network blocked, ad/privacy blocker, offline...)
-       we swap in a clean fallback block with the address and a
-       "Voir sur Google Maps" button instead of leaving a blank iframe. */
+    /* ----- Map: load the real Google Maps embed eagerly, fallback
+       only as a genuine last resort -----
+       The iframe has no lazy-loading attribute, so it starts fetching
+       as soon as the browser parses the tag — the map is visible as
+       soon as the page opens, never hidden by default. We only swap
+       in the address/button fallback card if the iframe reports a
+       real network error, or hasn't fired "load" at all after a
+       generous delay (blocked domain, offline, etc.). Nothing here
+       hides the iframe pre-emptively. */
     function initLazyMap() {
         const iframe = document.getElementById('map-iframe');
         const fallback = document.getElementById('map-fallback');
@@ -218,24 +220,10 @@
         iframe.addEventListener('load', () => { loaded = true; }, { once: true });
         iframe.addEventListener('error', showFallback, { once: true });
 
-        const startFailureTimer = () => {
-            setTimeout(() => { if (!loaded) showFallback(); }, 6000);
-        };
-
-        if (!('IntersectionObserver' in window)) {
-            startFailureTimer();
-            return;
-        }
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    observer.unobserve(entry.target);
-                    startFailureTimer();
-                }
-            });
-        }, { rootMargin: '200px' });
-        observer.observe(iframe);
+        // Safety net only: the iframe already started loading when the
+        // browser parsed the HTML, so 12s is a generous margin even on
+        // a slow connection before we conclude it genuinely failed.
+        setTimeout(() => { if (!loaded) showFallback(); }, 12000);
     }
 
     /* ----- Contact form (AJAX submission to n8n webhook) ----- */

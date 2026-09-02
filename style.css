@@ -2247,8 +2247,8 @@ section { padding: 100px 0; }
     }
     .formality-card { padding: 20px 18px; gap: 14px; }
 
-    .map-wrapper iframe { height: 320px; }
-    .map-wrapper { min-height: 320px; }
+    .map-wrapper iframe { height: 300px; }
+    .map-wrapper { min-height: 300px; }
     .map-action { flex-direction: column; }
     .map-action .btn { width: 100%; }
 
