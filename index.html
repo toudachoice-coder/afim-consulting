@@ -156,10 +156,10 @@
             background:
                 linear-gradient(
                     100deg,
-                    rgba(247, 249, 252, 0.95) 0%,
-                    rgba(247, 249, 252, 0.86) 38%,
-                    rgba(234, 242, 251, 0.60) 68%,
-                    rgba(234, 242, 251, 0.34) 100%
+                    rgba(247, 249, 252, 0.80) 0%,
+                    rgba(247, 249, 252, 0.66) 38%,
+                    rgba(234, 242, 251, 0.42) 68%,
+                    rgba(234, 242, 251, 0.20) 100%
                 ),
                 url('assets/images/hero.jpg') center/cover no-repeat;
         }
@@ -1205,17 +1205,32 @@
                     <p class="section-subtitle">Quartier Bourgogne, Casablanca, Maroc</p>
                 </div>
 
-                <div class="map-wrapper">
+                <div class="map-wrapper" id="map-wrapper">
                     <iframe
+                        id="map-iframe"
                         src="https://maps.google.com/maps?q=Bourgogne,+Casablanca,+Maroc&hl=fr&z=15&output=embed"
                         width="100%"
                         height="450"
                         style="border:0;"
                         allowfullscreen
-                        loading="lazy"
+                        loading="eager"
                         referrerpolicy="no-referrer-when-downgrade"
                         title="Localisation AFIM Consulting — Quartier Bourgogne, Casablanca, Maroc">
                     </iframe>
+                    <div class="map-fallback" id="map-fallback" hidden>
+                        <div class="map-fallback-inner">
+                            <i class="fas fa-location-dot" aria-hidden="true"></i>
+                            <p class="map-fallback-title">AFIM Consulting</p>
+                            <p class="map-fallback-address">Quartier Bourgogne, Casablanca, Maroc</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Bourgogne,+Casablanca,+Maroc"
+                               class="btn btn-primary"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               aria-label="Voir AFIM Consulting sur Google Maps">
+                                <i class="fas fa-map-location-dot" aria-hidden="true"></i> Voir sur Google Maps
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="map-action">

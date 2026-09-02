@@ -196,17 +196,34 @@
         elements.forEach(el => observer.observe(el));
     }
 
-    /* ----- Lazy load map iframe to improve performance ----- */
+    /* ----- Map: load the real Google Maps embed eagerly, fallback
+       only as a genuine last resort -----
+       The iframe has no lazy-loading attribute, so it starts fetching
+       as soon as the browser parses the tag — the map is visible as
+       soon as the page opens, never hidden by default. We only swap
+       in the address/button fallback card if the iframe reports a
+       real network error, or hasn't fired "load" at all after a
+       generous delay (blocked domain, offline, etc.). Nothing here
+       hides the iframe pre-emptively. */
     function initLazyMap() {
-        const iframe = document.querySelector('.map-wrapper iframe');
-        if (!iframe || !('IntersectionObserver' in window)) return;
-        // Already has loading="lazy", but ensure it's only loaded near viewport
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) observer.unobserve(entry.target);
-            });
-        }, { rootMargin: '200px' });
-        observer.observe(iframe);
+        const iframe = document.getElementById('map-iframe');
+        const fallback = document.getElementById('map-fallback');
+        if (!iframe) return;
+
+        let loaded = false;
+        const showFallback = () => {
+            if (loaded) return;
+            iframe.style.display = 'none';
+            if (fallback) fallback.hidden = false;
+        };
+
+        iframe.addEventListener('load', () => { loaded = true; }, { once: true });
+        iframe.addEventListener('error', showFallback, { once: true });
+
+        // Safety net only: the iframe already started loading when the
+        // browser parsed the HTML, so 12s is a generous margin even on
+        // a slow connection before we conclude it genuinely failed.
+        setTimeout(() => { if (!loaded) showFallback(); }, 12000);
     }
 
     /* ----- Contact form (AJAX submission to n8n webhook) ----- */
