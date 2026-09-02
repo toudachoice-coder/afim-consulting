@@ -1738,43 +1738,6 @@ section { padding: 100px 0; }
     max-width: 100%;
 }
 
-/* Repli professionnel si l'iframe Google Maps ne peut pas se charger
-   (réseau bloqué, bloqueur de contenu, etc.) : même emplacement, même
-   hauteur, adresse claire + bouton vers Google Maps. */
-.map-fallback {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 32px 24px;
-    background: linear-gradient(135deg, var(--light-grey) 0%, #e7edf5 100%);
-}
-
-.map-fallback-inner {
-    max-width: 360px;
-}
-
-.map-fallback i.fa-location-dot {
-    font-size: 34px;
-    color: var(--accent);
-    margin-bottom: 14px;
-}
-
-.map-fallback-title {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    color: var(--navy);
-    margin-bottom: 4px;
-}
-
-.map-fallback-address {
-    color: var(--text-muted);
-    margin-bottom: 20px;
-}
-
 .map-action {
     text-align: center;
     display: flex;
