@@ -197,33 +197,24 @@
     }
 
     /* ----- Map: load the real Google Maps embed eagerly, fallback
-       only as a genuine last resort -----
+       only on a confirmed failure -----
        The iframe has no lazy-loading attribute, so it starts fetching
        as soon as the browser parses the tag — the map is visible as
-       soon as the page opens, never hidden by default. We only swap
-       in the address/button fallback card if the iframe reports a
-       real network error, or hasn't fired "load" at all after a
-       generous delay (blocked domain, offline, etc.). Nothing here
-       hides the iframe pre-emptively. */
+       soon as the page opens, never hidden by default. The fallback
+       card is only ever shown when the browser itself reports the
+       embed failed (network error, or the frame being refused by the
+       target page's own X-Frame-Options/CSP — both fire the iframe's
+       native "error" event in current browsers). There is no timer:
+       a still-loading map is never mistaken for a failed one. */
     function initLazyMap() {
         const iframe = document.getElementById('map-iframe');
         const fallback = document.getElementById('map-fallback');
         if (!iframe) return;
 
-        let loaded = false;
-        const showFallback = () => {
-            if (loaded) return;
+        iframe.addEventListener('error', () => {
             iframe.style.display = 'none';
             if (fallback) fallback.hidden = false;
-        };
-
-        iframe.addEventListener('load', () => { loaded = true; }, { once: true });
-        iframe.addEventListener('error', showFallback, { once: true });
-
-        // Safety net only: the iframe already started loading when the
-        // browser parsed the HTML, so 12s is a generous margin even on
-        // a slow connection before we conclude it genuinely failed.
-        setTimeout(() => { if (!loaded) showFallback(); }, 12000);
+        }, { once: true });
     }
 
     /* ----- Contact form (AJAX submission to n8n webhook) ----- */
