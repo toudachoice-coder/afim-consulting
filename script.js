@@ -16,7 +16,6 @@
         initSmoothScroll();
         initScrollReveal();
         initContactForm();
-        initLazyMap();
     });
 
     /* ----- Header scroll effect ----- */
@@ -194,27 +193,6 @@
         }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
         elements.forEach(el => observer.observe(el));
-    }
-
-    /* ----- Map: load the real Google Maps embed eagerly, fallback
-       only on a confirmed failure -----
-       The iframe has no lazy-loading attribute, so it starts fetching
-       as soon as the browser parses the tag — the map is visible as
-       soon as the page opens, never hidden by default. The fallback
-       card is only ever shown when the browser itself reports the
-       embed failed (network error, or the frame being refused by the
-       target page's own X-Frame-Options/CSP — both fire the iframe's
-       native "error" event in current browsers). There is no timer:
-       a still-loading map is never mistaken for a failed one. */
-    function initLazyMap() {
-        const iframe = document.getElementById('map-iframe');
-        const fallback = document.getElementById('map-fallback');
-        if (!iframe) return;
-
-        iframe.addEventListener('error', () => {
-            iframe.style.display = 'none';
-            if (fallback) fallback.hidden = false;
-        }, { once: true });
     }
 
     /* ----- Contact form (AJAX submission to n8n webhook) ----- */
