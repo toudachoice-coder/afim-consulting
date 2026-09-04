@@ -16,6 +16,7 @@
         initSmoothScroll();
         initScrollReveal();
         initContactForm();
+        initCounters();
     });
 
     /* ----- Header scroll effect ----- */
@@ -193,6 +194,47 @@
         }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
         elements.forEach(el => observer.observe(el));
+    }
+
+    /* ----- Animated statistics counters ----- */
+    function initCounters() {
+        const counters = document.querySelectorAll('.stat-number[data-count]');
+        if (!counters.length) return;
+
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        const runCounter = (el) => {
+            const target = parseInt(el.getAttribute('data-count'), 10) || 0;
+            if (reduceMotion) {
+                el.textContent = target;
+                return;
+            }
+            const duration = 1400;
+            const start = performance.now();
+            const step = (now) => {
+                const progress = Math.min((now - start) / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                el.textContent = Math.round(eased * target);
+                if (progress < 1) requestAnimationFrame(step);
+            };
+            requestAnimationFrame(step);
+        };
+
+        if (!('IntersectionObserver' in window)) {
+            counters.forEach(runCounter);
+            return;
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    runCounter(entry.target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.4 });
+
+        counters.forEach(el => observer.observe(el));
     }
 
     /* ----- Contact form (AJAX submission to n8n webhook) ----- */
