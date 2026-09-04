@@ -17,6 +17,7 @@
         initScrollReveal();
         initContactForm();
         initCounters();
+        initMethodTimeline();
     });
 
     /* ----- Header scroll effect ----- */
@@ -173,7 +174,7 @@
             '.market-card', '.value-card', '.faq-item',
             '.about-image', '.about-content',
             '.transport-content', '.transport-visual',
-            '.section-header',
+            '.section-header', '.why-visual', '.stat-card',
             '.sector-block-head', '.enjeu-card', '.acc-item', '.gain-item'
         ];
         const elements = document.querySelectorAll(selectors.join(','));
@@ -235,6 +236,28 @@
         }, { threshold: 0.4 });
 
         counters.forEach(el => observer.observe(el));
+    }
+
+    /* ----- Method timeline progress fill ----- */
+    function initMethodTimeline() {
+        const method = document.querySelector('.method');
+        if (!method) return;
+
+        if (!('IntersectionObserver' in window)) {
+            method.classList.add('in-view');
+            return;
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    method.classList.add('in-view');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.35 });
+
+        observer.observe(method);
     }
 
     /* ----- Contact form (AJAX submission to n8n webhook) ----- */
