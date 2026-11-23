@@ -6,6 +6,25 @@ Site web statique **premium**, **professionnel** et **100% responsive** pour **A
 
 ---
 
+## 🎨 Thème « B3 Hybrid Premium » (refonte visuelle)
+
+Le design du site est porté par trois fichiers, sans framework ni étape de build :
+
+| Fichier | Rôle |
+|---|---|
+| `assets/b3.css` | Design system (variables CSS : couleurs, typographie, espacements, rayons, ombres), accueil, header, tiroir mobile, pied de page |
+| `assets/b3-inner.css` | Habillage des pages internes (services, secteurs, blog, articles, 404, merci). Les classes du HTML existant sont conservées |
+| `assets/b3.js` | Header (sombre sur le hero puis clair), méga-menus, menu mobile accessible, carrousel « Départs depuis Casablanca », onglets, FAQ d'article, formulaire de contact (webhook n8n inchangé) |
+| `assets/icons.svg` | Sprite d'icônes (Lucide, licence ISC) |
+| `assets/fonts/` | Polices auto-hébergées (WOFF2) : Bricolage Grotesque, Figtree, Newsreader, Montserrat (logo uniquement) |
+| `assets/photos/` | Photographies WebP (480/800/1280 px) et `manifest.json` (auteur, licence, source) |
+
+- Le CSS/JS d'origine (`style.css`, `script.js`, `blog/assets/blog.css`) n'est plus chargé par aucune page ; il reste dans le dépôt pour faciliter un retour arrière et pourra être supprimé après validation. `blog/assets/blog.js` (recherche et filtres du blog) est inchangé.
+- Le contenu des `<main>` des pages internes, les balises SEO, les JSON-LD, les URLs, le sitemap et le formulaire (champs, honeypot, URL du webhook n8n) sont inchangés.
+- Photographies : issues de Wikimedia Commons, crédits affichés dans le pied de page de l'accueil. Trois emplacements (Conseil, Douane/PortNet, Industrie) utilisent un visuel graphique de marque en attendant des photos réelles. Licences CC BY-SA à faire valider avant de conserver ces images.
+
+---
+
 ## 🚀 Déploiement Netlify (1 minute)
 
 ### Option A — Drag & Drop

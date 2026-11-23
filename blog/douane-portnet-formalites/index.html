@@ -33,16 +33,13 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='15' fill='%23071E3D'/%3E%3Ctext x='50' y='68' font-family='Montserrat,Arial' font-size='52' font-weight='800' text-anchor='middle' fill='%23FFFFFF'%3EA%3C/text%3E%3C/svg%3E">
     <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23071E3D'/%3E%3Ctext x='50' y='68' font-family='Montserrat,Arial' font-size='52' font-weight='800' text-anchor='middle' fill='%23FFFFFF'%3EA%3C/text%3E%3C/svg%3E">
     <link rel="manifest" href="../../manifest.webmanifest">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
 
-    <link rel="stylesheet" href="../../style.css?v=teal-fix-1">
-    <link rel="stylesheet" href="../assets/blog.css?v=grid-fix-2">
+    <link rel="preload" as="font" type="font/woff2" href="../../assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="../../assets/fonts/figtree-latin-wght-normal.woff2" crossorigin>
+    <link rel="stylesheet" href="../../assets/b3.css?v=b3-1">
+    <link rel="stylesheet" href="../../assets/b3-inner.css?v=b3-1">
 
     <script type="application/ld+json">
     {
@@ -75,74 +72,59 @@
     </script>
 </head>
 <body>
-    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
-
-    <header id="site-header" class="site-header" role="banner">
-        <div class="container header-inner">
-            <a href="../../index.html" class="logo" aria-label="AFIM Consulting - Accueil">
-                <span class="logo-mark" aria-hidden="true">
-                    <svg class="logo-mark-svg" viewBox="0 0 48 48" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="afimMarkBg" x1="0" y1="0" x2="1" y2="1">
-                                <stop offset="0" stop-color="#071E3D"/>
-                                <stop offset="1" stop-color="#0B5CAD"/>
-                            </linearGradient>
-                        </defs>
-                        <rect x="1" y="1" width="46" height="46" rx="13" fill="url(#afimMarkBg)"/>
-                        <rect x="1.75" y="1.75" width="44.5" height="44.5" rx="12.25" fill="none" stroke="#9CC4E4" stroke-opacity="0.16"/>
-                        <path d="M16 36 L24 11.5 L32 36" fill="none" stroke="#FFFFFF" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M18.7 28 L29.3 28" fill="none" stroke="#1BA6C9" stroke-width="3.4" stroke-linecap="round"/>
-                    </svg>
-                </span>
-                <span class="logo-text">AFIM <span class="logo-accent">Consulting</span></span>
-            </a>
-
-            <nav class="main-nav" aria-label="Navigation principale">
-                <ul class="nav-list">
-                    <li><a href="../../index.html#hero-section" class="nav-link">Accueil</a></li>
-                    <li><a href="../../index.html#about-section" class="nav-link">À propos</a></li>
-                    <li><a href="../../index.html#services-section" class="nav-link">Services</a></li>
-                    <li><a href="../../index.html#export-section" class="nav-link">Commerce International</a></li>
-                    <li><a href="../../index.html#formalites-section" class="nav-link">Formalités</a></li>
-                    <li><a href="../../index.html#secteurs-section" class="nav-link">Secteurs</a></li>
-                    <li><a href="../../blog/" class="nav-link active">Blog</a></li>
-                    <li><a href="../../index.html#contact-section" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
-
-            <div class="header-actions">
-                <a href="../../index.html#contact-section" class="btn btn-primary btn-cta-header">Demander une consultation</a>
-                <a href="https://wa.me/212763738280?text=Bonjour%20AFIM%20Consulting%2C%20je%20souhaite%20avoir%20des%20informations%20concernant%20vos%20services%20d%E2%80%99accompagnement%20import%2Fexport." class="mobile-whatsapp" aria-label="Contacter AFIM Consulting sur WhatsApp" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-whatsapp" aria-hidden="true"></i>
-                </a>
-                <button id="hamburger" class="hamburger" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="mobile-menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-
-        <nav id="mobile-menu" class="mobile-menu" aria-label="Menu mobile" aria-hidden="true">
+    <a href="#main-content" class="skip">Aller au contenu principal</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><linearGradient id="afimMarkBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#071E3D"/><stop offset="1" stop-color="#0B5CAD"/></linearGradient></defs></svg>
+<header class="hdr" id="site-header" role="banner">
+    <div class="hdr-in">
+        <a class="logo" href="../../index.html" aria-label="AFIM Consulting - Accueil"><svg class="logo-mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect x="1" y="1" width="46" height="46" rx="13" fill="url(#afimMarkBg)"/><rect x="1.75" y="1.75" width="44.5" height="44.5" rx="12.25" fill="none" stroke="#9CC4E4" stroke-opacity="0.16"/><path d="M16 36 L24 11.5 L32 36" fill="none" stroke="#FFFFFF" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.7 28 L29.3 28" fill="none" stroke="#1BA6C9" stroke-width="3.4" stroke-linecap="round"/></svg><span class="logo-text">AFIM <span class="logo-accent">Consulting</span></span></a>
+        <nav class="nav" aria-label="Navigation principale">
             <ul>
-                <li><a href="../../index.html#hero-section" class="mobile-link">Accueil</a></li>
-                <li><a href="../../index.html#about-section" class="mobile-link">À propos</a></li>
-                <li><a href="../../index.html#services-section" class="mobile-link">Services</a></li>
-                <li><a href="../../index.html#export-section" class="mobile-link">Commerce International</a></li>
-                <li><a href="../../index.html#formalites-section" class="mobile-link">Formalités</a></li>
-                <li><a href="../../index.html#secteurs-section" class="mobile-link">Secteurs</a></li>
-                <li><a href="../../blog/" class="mobile-link">Blog</a></li>
-                <li><a href="../../index.html#contact-section" class="mobile-link">Contact</a></li>
-                <li class="mobile-actions">
-                    <a href="../../index.html#contact-section" class="btn btn-primary mobile-cta">Demander une consultation</a>
-                    <a href="https://wa.me/212763738280?text=Bonjour%20AFIM%20Consulting%2C%20je%20souhaite%20avoir%20des%20informations%20concernant%20vos%20services%20d%E2%80%99accompagnement%20import%2Fexport." class="btn btn-whatsapp mobile-cta" target="_blank" rel="noopener noreferrer">
-                       <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
-                    </a>
-                </li>
+                <li class="has-mega"><button class="mega-btn" type="button" aria-expanded="false" aria-controls="mega-services">Services <svg class="ic chev" aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-chevron-down"/></svg></button>
+                    <div class="mega" id="mega-services" role="group" aria-label="Services"><ul class="mega-grid">
+                        <li><a class="mega-item" href="../../services/conseil-personnalise.html"><span class="mi-ic"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-compass"/></svg></span><span><strong>Conseil personnalisé</strong><small>Un accompagnement sur mesure pour clarifier votre stratégie, sécuriser vos décisions et structurer durablement votre développement commercial.</small></span></a></li>
+                        <li><a class="mega-item" href="../../services/accompagnement-export.html"><span class="mi-ic"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-globe"/></svg></span><span><strong>Accompagnement export</strong><small>De la préparation de vos dossiers à l'expédition de vos marchandises, nous structurons chaque étape de votre projet d'exportation.</small></span></a></li>
+                        <li><a class="mega-item" href="../../services/marches-internationaux.html"><span class="mi-ic"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-route"/></svg></span><span><strong>Marchés internationaux</strong><small>Identifier les bons marchés, comprendre leurs exigences et construire une stratégie d’entrée réaliste et progressive.</small></span></a></li>
+                        <li><a class="mega-item" href="../../services/formalites-administratives.html"><span class="mi-ic"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-file-check"/></svg></span><span><strong>Formalités administratives</strong><small>Simplifier, organiser et sécuriser vos démarches administratives pour avancer sans blocage.</small></span></a></li>
+                        <li><a class="mega-item" href="../../services/transport-marchandises.html"><span class="mi-ic"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-truck"/></svg></span><span><strong>Transport de marchandises</strong><small>Acheminer vos marchandises dans de bonnes conditions, au bon coût et dans les bons délais.</small></span></a></li>
+                        <li><a class="mega-item mega-cta" href="../../index.html#contact-section"><span class="mi-ic"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-calendar-check"/></svg></span><span><strong>Demander une consultation</strong><small>Notre équipe étudie votre demande et vous oriente.</small></span></a></li>
+                    </ul></div></li>
+                <li><a href="../../index.html#export-section">Marchés</a></li>
+                <li class="has-mega"><button class="mega-btn" type="button" aria-expanded="false" aria-controls="mega-secteurs">Secteurs <svg class="ic chev" aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-chevron-down"/></svg></button>
+                    <div class="mega" id="mega-secteurs" role="group" aria-label="Secteurs accompagnés"><div class="mega-cols">
+                        <div><p class="mega-h">Par type de produit</p><ul><li><a href="../../secteurs/produits-alimentaires.html"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-utensils"/></svg>Produits alimentaires</a></li><li><a href="../../secteurs/produits-cosmetiques.html"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-sparkles"/></svg>Produits cosmétiques</a></li><li><a href="../../secteurs/produits-artisanaux.html"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-palette"/></svg>Produits artisanaux</a></li><li><a href="../../secteurs/produits-du-terroir.html"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-sprout"/></svg>Produits du terroir</a></li></ul></div>
+                        <div><p class="mega-h">Par profil d’entreprise</p><ul><li><a href="../../secteurs/cooperatives.html"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-users"/></svg>Coopératives</a></li><li><a href="../../secteurs/pme.html"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-building-2"/></svg>PME</a></li><li><a href="../../secteurs/importateurs.html"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-package-open"/></svg>Importateurs</a></li><li><a href="../../secteurs/exportateurs.html"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-container"/></svg>Exportateurs</a></li><li><a href="../../secteurs/commercants.html"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-store"/></svg>Commerçants</a></li><li><a href="../../secteurs/negociants.html"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-briefcase"/></svg>Négociants</a></li></ul></div>
+                    </div></div></li>
+                <li><a href="../../index.html#about-section">À propos</a></li>
+                <li><a href="../../blog/" aria-current="page">Blog</a></li>
+                <li><a href="../../index.html#faq-section">FAQ</a></li>
+                <li><a href="../../index.html#contact-section">Contact</a></li>
             </ul>
         </nav>
-        <div id="menu-backdrop" class="menu-backdrop" aria-hidden="true"></div>
-    </header>
+        <div class="hdr-actions">
+            <a class="btn btn-mj btn-sm hide-m" href="../../index.html#contact-section" aria-label="Demander une consultation"><span class="lbl-l" aria-hidden="true">Demander une consultation</span><span class="lbl-s" aria-hidden="true">Consultation</span></a>
+            <button class="burger" type="button" aria-expanded="false" aria-controls="sheet" aria-label="Ouvrir le menu"><span class="burger-l"></span><span class="burger-l"></span><span class="burger-l"></span></button>
+        </div>
+    </div>
+</header>
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Menu de navigation">
+    <div class="sheet-panel">
+        <div class="sheet-top"><a class="logo" href="../../index.html" aria-label="AFIM Consulting - Accueil"><svg class="logo-mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect x="1" y="1" width="46" height="46" rx="13" fill="url(#afimMarkBg)"/><rect x="1.75" y="1.75" width="44.5" height="44.5" rx="12.25" fill="none" stroke="#9CC4E4" stroke-opacity="0.16"/><path d="M16 36 L24 11.5 L32 36" fill="none" stroke="#FFFFFF" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.7 28 L29.3 28" fill="none" stroke="#1BA6C9" stroke-width="3.4" stroke-linecap="round"/></svg><span class="logo-text">AFIM <span class="logo-accent">Consulting</span></span></a><button type="button" class="sheet-x" data-close-sheet aria-label="Fermer le menu"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-x"/></svg></button></div>
+        <div class="sheet-scroll"><nav aria-label="Menu mobile"><ul class="sheet-list">
+            <li><details class="sd"><summary>Services <svg class="ic chev" aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-chevron-down"/></svg></summary><ul><li><a href="../../services/conseil-personnalise.html"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-compass"/></svg>Conseil personnalisé</a></li><li><a href="../../services/accompagnement-export.html"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-globe"/></svg>Accompagnement export</a></li><li><a href="../../services/marches-internationaux.html"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-route"/></svg>Marchés internationaux</a></li><li><a href="../../services/formalites-administratives.html"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-file-check"/></svg>Formalités administratives</a></li><li><a href="../../services/transport-marchandises.html"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-truck"/></svg>Transport de marchandises</a></li></ul></details></li>
+            <li><a class="sl" href="../../index.html#export-section">Marchés</a></li>
+            <li><details class="sd"><summary>Secteurs <svg class="ic chev" aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-chevron-down"/></svg></summary><ul><li><a href="../../secteurs/produits-alimentaires.html"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-utensils"/></svg>Produits alimentaires</a></li><li><a href="../../secteurs/produits-cosmetiques.html"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-sparkles"/></svg>Produits cosmétiques</a></li><li><a href="../../secteurs/produits-artisanaux.html"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-palette"/></svg>Produits artisanaux</a></li><li><a href="../../secteurs/produits-du-terroir.html"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-sprout"/></svg>Produits du terroir</a></li><li><a href="../../secteurs/cooperatives.html"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-users"/></svg>Coopératives</a></li><li><a href="../../secteurs/pme.html"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-building-2"/></svg>PME</a></li><li><a href="../../secteurs/importateurs.html"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-package-open"/></svg>Importateurs</a></li><li><a href="../../secteurs/exportateurs.html"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-container"/></svg>Exportateurs</a></li><li><a href="../../secteurs/commercants.html"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-store"/></svg>Commerçants</a></li><li><a href="../../secteurs/negociants.html"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-briefcase"/></svg>Négociants</a></li></ul></details></li>
+            <li><a class="sl" href="../../index.html#about-section">À propos</a></li>
+            <li><a class="sl" href="../../blog/">Blog</a></li>
+            <li><a class="sl" href="../../index.html#faq-section">FAQ</a></li>
+            <li><a class="sl" href="../../index.html#contact-section">Contact</a></li>
+        </ul></nav></div>
+        <div class="sheet-cta">
+            <a class="btn btn-mj btn-lg btn-block" href="../../index.html#contact-section"><span>Demander une consultation</span><span class="arr"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-arrow-right"/></svg></span></a>
+            <div class="sheet-two"><a class="btn btn-ghost" href="tel:+212763738280"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-phone"/></svg><span>Appeler</span></a><a class="btn btn-ghost btn-wa" href="https://wa.me/212763738280?text=Bonjour%20AFIM%20Consulting%2C%20je%20souhaite%20avoir%20des%20informations%20concernant%20vos%20services%20d%E2%80%99accompagnement%20import%2Fexport." target="_blank" rel="noopener noreferrer"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-whatsapp"/></svg><span>WhatsApp</span></a></div>
+            <p class="sheet-meta">Du lundi au samedi, 9h – 18h · Quartier Bourgogne, Casablanca, Maroc</p>
+        </div>
+    </div>
+</div>
 
     <main id="main-content">
 
@@ -162,6 +144,8 @@
                 </div>
             </div>
         </section>
+
+        <div data-header-sentinel aria-hidden="true" style="height:1px;margin-top:-1px"></div>
 
         <section class="sector-detail-section" aria-labelledby="list-titre">
             <div class="container">
@@ -209,78 +193,29 @@
 
     </main>
 
-    <footer class="site-footer" role="contentinfo">
-        <div class="container footer-grid">
-            <div class="footer-col footer-brand">
-                <a href="../../index.html" class="logo footer-logo" aria-label="AFIM Consulting - Accueil">
-                    <span class="logo-mark" aria-hidden="true">
-                    <svg class="logo-mark-svg" viewBox="0 0 48 48" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="afimMarkBgFooter" x1="0" y1="0" x2="1" y2="1">
-                                <stop offset="0" stop-color="#071E3D"/>
-                                <stop offset="1" stop-color="#0B5CAD"/>
-                            </linearGradient>
-                        </defs>
-                        <rect x="1" y="1" width="46" height="46" rx="13" fill="url(#afimMarkBgFooter)"/>
-                        <rect x="1.75" y="1.75" width="44.5" height="44.5" rx="12.25" fill="none" stroke="#9CC4E4" stroke-opacity="0.16"/>
-                        <path d="M16 36 L24 11.5 L32 36" fill="none" stroke="#FFFFFF" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M18.7 28 L29.3 28" fill="none" stroke="#1BA6C9" stroke-width="3.4" stroke-linecap="round"/>
-                    </svg>
-                </span>
-                    <span class="logo-text">AFIM <span class="logo-accent">Consulting</span></span>
-                </a>
-                <p>Conseil, assistance et accompagnement pour l'import, l'export, le négoce, les formalités administratives et le transport de marchandises.</p>
-            </div>
+    <footer class="site-foot" role="contentinfo"><div class="wrap">
+    <div class="foot-grid">
+        <div class="foot-brand"><a class="logo" href="../../index.html" aria-label="AFIM Consulting - Accueil"><svg class="logo-mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect x="1" y="1" width="46" height="46" rx="13" fill="url(#afimMarkBg)"/><rect x="1.75" y="1.75" width="44.5" height="44.5" rx="12.25" fill="none" stroke="#9CC4E4" stroke-opacity="0.16"/><path d="M16 36 L24 11.5 L32 36" fill="none" stroke="#FFFFFF" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.7 28 L29.3 28" fill="none" stroke="#1BA6C9" stroke-width="3.4" stroke-linecap="round"/></svg><span class="logo-text">AFIM <span class="logo-accent">Consulting</span></span></a><p>Conseil, assistance et accompagnement pour l'import, l'export, le négoce, les formalités administratives et le transport de marchandises.</p></div>
+        <nav aria-label="Pied de page : navigation"><h2 class="foot-h">Navigation</h2><ul>
+            <li><a href="../../index.html#hero-section">Accueil</a></li><li><a href="../../index.html#about-section">À propos</a></li><li><a href="../../index.html#services-section">Services</a></li><li><a href="../../blog/">Blog</a></li><li><a href="../../index.html#contact-section">Contact</a></li></ul></nav>
+        <nav aria-label="Pied de page : services"><h2 class="foot-h">Services</h2><ul>
+            <li><a href="../../index.html#export-section">Commerce International</a></li><li><a href="../../index.html#formalites-section">FOODEX</a></li><li><a href="../../index.html#formalites-section">Douane / PortNet</a></li><li><a href="../../index.html#formalites-section">RNA</a></li><li><a href="../../index.html#formalites-section">Artisanat</a></li><li><a href="../../index.html#services-section">Transport de marchandises</a></li></ul></nav>
+        <div><h2 class="foot-h">Contact</h2><ul class="foot-contact">
+            <li><a href="tel:+212763738280"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-phone"/></svg>+212 763 738 280</a></li>
+            <li><a href="mailto:afim.consulting.contact@gmail.com"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-mail"/></svg>afim.consulting.contact@gmail.com</a></li>
+            <li><a href="https://wa.me/212763738280?text=Bonjour%20AFIM%20Consulting%2C%20je%20souhaite%20avoir%20des%20informations%20concernant%20vos%20services%20d%E2%80%99accompagnement%20import%2Fexport." target="_blank" rel="noopener noreferrer"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-whatsapp"/></svg>WhatsApp</a></li>
+            <li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Bourgogne,+Casablanca,+Maroc" target="_blank" rel="noopener noreferrer"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-map-pin"/></svg>Quartier Bourgogne, Casablanca, Maroc</a></li></ul></div>
+    </div>
+    
+    <div class="foot-bottom"><p>© 2026 AFIM Consulting. Tous droits réservés.</p><p>Du lundi au samedi, 9h – 18h</p></div>
+</div></footer>
+<div class="bar" aria-label="Actions rapides">
+    <a class="btn btn-ghost" href="tel:+212763738280" aria-label="Appeler +212 763 738 280"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-phone"/></svg><span>Appeler</span></a>
+    <a class="btn btn-ghost btn-wa" href="https://wa.me/212763738280?text=Bonjour%20AFIM%20Consulting%2C%20je%20souhaite%20avoir%20des%20informations%20concernant%20vos%20services%20d%E2%80%99accompagnement%20import%2Fexport." target="_blank" rel="noopener noreferrer" aria-label="Contacter sur WhatsApp"><svg class="ic " aria-hidden="true" focusable="false"><use href="../../assets/icons.svg#i-whatsapp"/></svg><span>WhatsApp</span></a>
+    <a class="btn btn-mj" href="../../index.html#contact-section"><span>Consultation</span></a>
+</div>
 
-            <div class="footer-col">
-                <h4>Navigation</h4>
-                <ul>
-                    <li><a href="../../index.html#hero-section">Accueil</a></li>
-                    <li><a href="../../index.html#about-section">À propos</a></li>
-                    <li><a href="../../index.html#services-section">Services</a></li>
-                    <li><a href="../../blog/">Blog</a></li>
-                    <li><a href="../../index.html#contact-section">Contact</a></li>
-                </ul>
-            </div>
 
-            <div class="footer-col">
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="../../services/conseil-personnalise.html">Conseil personnalisé</a></li>
-                    <li><a href="../../services/accompagnement-export.html">Accompagnement export</a></li>
-                    <li><a href="../../services/marches-internationaux.html">Marchés internationaux</a></li>
-                    <li><a href="../../services/formalites-administratives.html">Formalités administratives</a></li>
-                    <li><a href="../../services/transport-marchandises.html">Transport de marchandises</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h4>Contact</h4>
-                <ul class="footer-contact">
-                    <li><a href="tel:+212763738280"><i class="fas fa-phone" aria-hidden="true"></i> +212 763 738 280</a></li>
-                    <li><a href="mailto:afim.consulting.contact@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i> afim.consulting.contact@gmail.com</a></li>
-                    <li><a href="https://wa.me/212763738280?text=Bonjour%20AFIM%20Consulting%2C%20je%20souhaite%20avoir%20des%20informations%20concernant%20vos%20services%20d%E2%80%99accompagnement%20import%2Fexport." target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</a></li>
-                    <li><a href="https://www.google.com/maps/dir/?api=1&destination=Bourgogne,+Casablanca,+Maroc" target="_blank" rel="noopener noreferrer"><i class="fas fa-location-dot" aria-hidden="true"></i> Quartier Bourgogne, Casablanca, Maroc</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <div class="container">
-                <p>&copy; 2026 AFIM Consulting. Tous droits réservés.</p>
-            </div>
-        </div>
-    </footer>
-
-    <a href="https://wa.me/212763738280?text=Bonjour%20AFIM%20Consulting%2C%20je%20souhaite%20avoir%20des%20informations%20concernant%20vos%20services%20d%E2%80%99accompagnement%20import%2Fexport." class="floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contacter AFIM Consulting sur WhatsApp">
-        <i class="fab fa-whatsapp" aria-hidden="true"></i>
-        <span class="floating-tooltip">Chat WhatsApp</span>
-    </a>
-
-    <button id="back-to-top" class="back-to-top" aria-label="Retour en haut de la page">
-        <i class="fas fa-arrow-up" aria-hidden="true"></i>
-    </button>
-
-    <script src="../../script.js" defer></script>
+    <script src="../../assets/b3.js?v=b3-1" defer></script>
 </body>
 </html>
