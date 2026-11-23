@@ -1,0 +1,154 @@
+{
+ "p01": {
+  "files": [
+   {
+    "name": "p01-480.webp",
+    "w": 480,
+    "h": 320,
+    "bytes": 16846
+   },
+   {
+    "name": "p01-800.webp",
+    "w": 800,
+    "h": 533,
+    "bytes": 44644
+   },
+   {
+    "name": "p01-1280.webp",
+    "w": 1280,
+    "h": 853,
+    "bytes": 107652
+   }
+  ],
+  "alt": "Terminal à conteneurs du port de Casablanca, avec grues portuaires et piles de conteneurs face à la mer",
+  "position": "50% 55%",
+  "title_fr": "Port de Casablanca",
+  "status": "sélectionnée (licence lue sur Wikimedia Commons)",
+  "license": "CC BY-SA 4.0",
+  "author": "N. Johannes",
+  "source": "https://commons.wikimedia.org/wiki/File:Casablanca-port2.jpg",
+  "commons_title": "File:Casablanca-port2.jpg",
+  "original": "5635x3763",
+  "section": "Expertise « Accompagnement export international » et article de blog",
+  "ratio": "16:9 (bento) · 16:8 (article) · 3:2 source",
+  "note": ""
+ },
+ "p07": {
+  "files": [
+   {
+    "name": "p07-480.webp",
+    "w": 480,
+    "h": 320,
+    "bytes": 39000
+   },
+   {
+    "name": "p07-800.webp",
+    "w": 800,
+    "h": 533,
+    "bytes": 110146
+   }
+  ],
+  "alt": "Porte-conteneurs à quai au terminal de Tanger Med, sous les portiques bleus, au pied du relief",
+  "position": "50% 50%",
+  "title_fr": "Terminal Tanger Med",
+  "status": "sélectionnée (licence lue sur Wikimedia Commons)",
+  "license": "CC BY-SA 4.0",
+  "author": "Bertrand SOUBEYRAND",
+  "source": "https://commons.wikimedia.org/wiki/File:Porte-conteneurs_Maersk_Congo_Tanger_med.jpg",
+  "commons_title": "File:Porte-conteneurs Maersk Congo Tanger med.jpg",
+  "original": "4288x2848",
+  "section": "Expertise « Transport de marchandises »",
+  "ratio": "16:10",
+  "note": ""
+ },
+ "p04": {
+  "files": [
+   {
+    "name": "p04-480.webp",
+    "w": 480,
+    "h": 320,
+    "bytes": 12284
+   },
+   {
+    "name": "p04-800.webp",
+    "w": 800,
+    "h": 533,
+    "bytes": 29068
+   }
+  ],
+  "alt": "Mains posant l'étiquette sur un bocal alimentaire, étape de conformité et de présentation du produit",
+  "position": "45% 40%",
+  "title_fr": "Étiquetage d'un produit alimentaire",
+  "status": "sélectionnée (licence lue sur Wikimedia Commons)",
+  "license": "Public domain",
+  "author": "U.S. Department of Agriculture\n\nBob Nichols/Photographer/United States Department of Agriculture-Office of Communications-Photography Services Division",
+  "source": "https://commons.wikimedia.org/wiki/File:20130307-OC-RBN-4180_(8578616178).jpg",
+  "commons_title": "File:20130307-OC-RBN-4180 (8578616178).jpg",
+  "original": "6144x4081",
+  "section": "Formalités et conformité (FOODEX)",
+  "ratio": "3:2 (recadrage object-fit selon l’emplacement)",
+  "note": "Photographie d'illustration (producteur américain, domaine public USDA) : à remplacer par une image marocaine."
+ },
+ "p05": {
+  "files": [
+   {
+    "name": "p05-480.webp",
+    "w": 480,
+    "h": 320,
+    "bytes": 37294
+   },
+   {
+    "name": "p05-800.webp",
+    "w": 800,
+    "h": 533,
+    "bytes": 91524
+   }
+  ],
+  "alt": "Cuves colorées des tanneries traditionnelles de Fès, vues d'en haut",
+  "position": "50% 50%",
+  "title_fr": "Tanneries de Fès",
+  "status": "sélectionnée (licence lue sur Wikimedia Commons)",
+  "license": "CC BY 2.0",
+  "author": "16:9clue",
+  "source": "https://commons.wikimedia.org/wiki/File:The_oldest_leather_tannery_in_the_world_(5208903915).jpg",
+  "commons_title": "File:The oldest leather tannery in the world (5208903915).jpg",
+  "original": "2816x1584",
+  "section": "Secteurs : Produits artisanaux",
+  "ratio": "3:2 (recadrage object-fit selon l’emplacement)",
+  "note": "Résolution d'origine moyenne (2816 px)."
+ },
+ "p06": {
+  "files": [
+   {
+    "name": "p06-480.webp",
+    "w": 480,
+    "h": 320,
+    "bytes": 33774
+   },
+   {
+    "name": "p06-800.webp",
+    "w": 800,
+    "h": 533,
+    "bytes": 76000
+   },
+   {
+    "name": "p06-1280.webp",
+    "w": 1280,
+    "h": 853,
+    "bytes": 164106
+   }
+  ],
+  "alt": "Oranges mûres sur une branche d'oranger au Maroc",
+  "position": "50% 40%",
+  "title_fr": "Oranges marocaines",
+  "status": "sélectionnée (licence lue sur Wikimedia Commons)",
+  "license": "CC BY-SA 4.0",
+  "author": "Adnane El Mejdoubi",
+  "source": "https://commons.wikimedia.org/wiki/File:Moroccan_Orange.jpg",
+  "commons_title": "File:Moroccan Orange.jpg",
+  "original": "3264x2448",
+  "section": "Secteurs : Produits alimentaires",
+  "ratio": "3:2 (recadrage object-fit selon l’emplacement)",
+  "note": ""
+ }
+}
