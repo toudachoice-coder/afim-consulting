@@ -362,6 +362,7 @@ p{margin:0}ul,ol{margin:0;padding:0;list-style:none}a{color:inherit;text-decorat
 .foot-contact .ic{color:var(--teal)}.foot-contact li a{align-items:flex-start}.foot-contact .ic{margin-top:.35em}
 .credits{margin-top:2.5rem;border-top:1px solid rgba(255,255,255,.12);padding-top:1rem;font-size:.9rem}
 .credits summary{cursor:pointer;min-height:44px;display:flex;align-items:center;color:#D3DCEE;font-weight:600;list-style:none}.credits summary::-webkit-details-marker{display:none}
+.credits-note{margin:.5rem 0 0;color:#AEBAD1;font-size:.9rem;line-height:1.5}
 .credits ul{display:grid;gap:.5rem;margin:.5rem 0 0;color:#AEBAD1}.credits li{margin:0;font-size:.9rem;line-height:1.5}.credits a{text-decoration:underline;text-underline-offset:3px}
 .foot-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 1.5rem;margin-top:2rem;padding-top:1.3rem;border-top:1px solid rgba(255,255,255,.12);font-size:.9rem;color:#8E9CB6}
 

@@ -31,7 +31,9 @@
   "original": "5635x3763",
   "section": "Expertise « Accompagnement export international » et article de blog",
   "ratio": "16:9 (bento) · 16:8 (article) · 3:2 source",
-  "note": ""
+  "note": "",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.fr",
+  "modifications": "Recadrée, redimensionnée et convertie au format WebP."
  },
  "p07": {
   "files": [
@@ -59,7 +61,9 @@
   "original": "4288x2848",
   "section": "Expertise « Transport de marchandises »",
   "ratio": "16:10",
-  "note": ""
+  "note": "",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.fr",
+  "modifications": "Recadrée, redimensionnée et convertie au format WebP."
  },
  "p04": {
   "files": [
@@ -87,7 +91,9 @@
   "original": "6144x4081",
   "section": "Formalités et conformité (FOODEX)",
   "ratio": "3:2 (recadrage object-fit selon l’emplacement)",
-  "note": "Photographie d'illustration (producteur américain, domaine public USDA) : à remplacer par une image marocaine."
+  "note": "Photographie d'illustration (producteur américain, domaine public USDA) : à remplacer par une image marocaine.",
+  "license_url": null,
+  "modifications": "Recadrée, redimensionnée et convertie au format WebP."
  },
  "p05": {
   "files": [
@@ -115,7 +121,9 @@
   "original": "2816x1584",
   "section": "Secteurs : Produits artisanaux",
   "ratio": "3:2 (recadrage object-fit selon l’emplacement)",
-  "note": "Résolution d'origine moyenne (2816 px)."
+  "note": "Résolution d'origine moyenne (2816 px).",
+  "license_url": "https://creativecommons.org/licenses/by/2.0/deed.fr",
+  "modifications": "Recadrée, redimensionnée et convertie au format WebP."
  },
  "p06": {
   "files": [
@@ -149,6 +157,8 @@
   "original": "3264x2448",
   "section": "Secteurs : Produits alimentaires",
   "ratio": "3:2 (recadrage object-fit selon l’emplacement)",
-  "note": ""
+  "note": "",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.fr",
+  "modifications": "Recadrée, redimensionnée et convertie au format WebP."
  }
 }
